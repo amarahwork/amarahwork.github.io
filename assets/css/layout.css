@@ -100,7 +100,7 @@ img {
     
     --page-margin: 8vw;
     
-    --mono: normal 600 .65rem/.9rem 'Consolas', 'Monaco', monospace;
+    --mono: normal 600 .65rem/1rem 'Consolas', 'Monaco', monospace;
     --monokern: .8pt;
     --body: normal normal 0.8rem/1.25rem 'Times New Roman', serif;
 }
@@ -120,8 +120,10 @@ body {
 }
 
 .highlight {
-    color: var(--accent);
+    display: inline-block;
+    background: var(--accent);
     font-weight: 600;
+    padding: 1px 4px;
 }
 
 a, a:visited {
