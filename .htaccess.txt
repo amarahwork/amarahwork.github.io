@@ -1,0 +1,28 @@
+#Removes file extentions from URL
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+
+#FontAccess
+RewriteEngine On
+RewriteCond %{HTTP:Origin}  !^$|http(s)?://(www\.)?amarah.work\.com$ [NC]
+
+RewriteRule \.(woff|woff2|eot)$ - [NC,L]
+RewriteCond %{HTTP_REFERER} !.
+RewriteRule \.(woff|woff2|eot)$ - [F,NC,L]
+Options -Indexes
+
+
+#Rewrite URL's
+RewriteEngine On
+RewriteRule ^404/?$ https://amarah.work/404/ [NC]
+
+
+# Enable Error Documents
+# (404,File Not Found) | (403,Forbidden) | (500,Internal Server Error)
+ErrorDocument 404 /404
+ErrorDocument 403 /404
+ErrorDocument 403 https://amarah.work/404/

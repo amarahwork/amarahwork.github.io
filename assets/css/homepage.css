@@ -1,0 +1,167 @@
+/*===============================================*/
+/* Homepage */
+/*===============================================*/
+
+:root {
+    --projects-allowance: 50%;
+}
+
+html {
+    background: var(--pink);
+}
+
+body {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+}
+
+header span {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 25vw;
+    line-height: .7;
+    letter-spacing: -3vw;
+}
+
+header span:first-child {
+    position: relative;
+    z-index: 2;
+}
+
+header img {
+    position: absolute;
+    top: 0;
+    right: -4vw;
+    width: 50vw;
+    image-rendering: pixelated;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.intro {
+    font: var(--mono);
+    background: var(--glass);
+    backdrop-filter: var(--filter-effect);
+    padding: 4ch;
+    margin: var(--page-margin);
+    position: fixed;
+    z-index: 1001;
+}
+
+
+/* projects
+========================================================================== */
+
+h2 {
+    background: var(--black);
+    padding: 2px var(--page-margin);
+    color: var(--white);
+    font: var(--mono);
+    letter-spacing: var(--monokern);
+    text-transform: uppercase;
+    margin-bottom: 0;
+    border: none;
+}
+
+.projects {
+    width: 100%;
+    backdrop-filter: blur(5px);
+    border-top: 1px solid currentColor;
+    font: var(--mono);
+    letter-spacing: var(--monokern);
+    text-transform: uppercase;
+    padding-bottom: 4vh;
+}
+
+.projects .row, .projects .headers {
+    display: flex;
+    border-bottom: 1px solid var(--black);
+    padding-right: calc(var(--page-margin) * 2);
+}
+
+.projects .cell {
+    width: calc( var(--projects-allowance) * .2);
+    flex: 1 1 calc( var(--projects-allowance) * .2);
+    padding: 2px 1ch;
+    border-left: 1px solid var(--black);
+    flex-shrink: 1;
+    flex-grow: 1;
+    font-weight: normal;
+}
+
+.projects .cell:first-child, .projects .headers .cell {
+    font-weight: 600;
+}
+
+.projects .cell:first-child {
+    padding-left: var(--page-margin);
+    min-width: calc( var(--projects-allowance) * .4);
+    flex-grow: 2;
+    flex-shrink: 1;
+    border-left: unset;
+}
+
+.projects .cell:last-child {
+    min-width: 4ch;
+    flex-grow: 2;
+    padding-right: var(--page-margin);
+}
+
+.projects .row:hover {
+    color: var(--pink);
+    background: var(--black);
+}
+
+.projects .row:hover * {
+    border-color: var(--pink);
+}
+
+.projects a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+
+/*===============================================*/
+
+@media screen and (max-width: 720px) {   
+    
+    header, .intro {
+        position: static;
+    }
+
+    main {
+        margin-top: 1ch;
+        display: block;
+    }
+    
+    .projects .row, .projects .headers {
+        padding: unset;
+    }
+    
+    .projects .cell, .projects .cell:first-child, .projects .cell:last-child {
+        width: 33.3%;
+        flex: 0 0 33.3%;
+        min-width: unset;
+    }
+    
+    .projects .cell:last-child {
+        display: none;
+    }
+}

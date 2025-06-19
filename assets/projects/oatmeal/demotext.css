@@ -1,0 +1,82 @@
+/* Based on "Variable Font Slider" by Danielle Romo via Codepen */
+/* https://codepen.io/dromo77 */
+
+:root {
+  --text-weight: 400;
+}
+
+@font-face {
+  font-family: 'Oatmeal';
+  src: url('oatmeal.ttf') format('truetype'), url('fonts/oatmeal.ttf') format('woff2 variable');
+  font-weight: 300 900;
+  font-style: normal;
+}
+
+.container { margin: 0 auto; width: 80%; }
+
+#demo-text {
+  font-family: "Oatmeal Variable", "Oatmeal";
+  text-align: center;
+  color: #0F1031;
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight);
+  border: none;
+  resize: none;
+  overflow: hidden;
+  width: 100%;
+  background: inherit;
+}
+
+.textbox {
+  margin: 0 auto 2rem 0;
+  width: 100%;
+    border: 1px solid var(--black);
+}
+
+.controls {
+    font: var(--mono);
+}
+
+
+/* Custom slider */
+.controls input {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 18px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid var(--black);
+    background: none;
+    padding: 0 1px;
+}
+
+.controls input::-webkit-slider-thumb, .controls input::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: var(--accent);
+    border: none;
+    cursor: pointer;
+}
+
+/*Thumb for Firefox*/
+.controls input::-moz-range-thumb:hover,
+.controls input::-moz-range-thumb:active {
+    background: var(--pink);
+}
+
+/*Thumb for other browsers*/
+.controls input::-webkit-slider-thumb:active {
+    background: var(--pink);
+}
+
+@media screen and (max-width:910px) {
+  .demo-text {
+      font-size: 3rem;
+      line-height: 3rem;
+  }

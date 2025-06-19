@@ -1,0 +1,222 @@
+/*===============================================*/
+/* projects */
+/*===============================================*/
+
+body {
+    min-height: 100vh;
+}
+
+/* Header */
+/*===============================================*/
+
+header {
+    position: relative;
+    background: var(--white) no-repeat center;
+    background-size: cover;
+    z-index: 100;
+}
+
+header > * {
+    padding: 2rem var(--page-margin) 1rem var(--page-margin);
+}
+
+/*Details*/
+.tag { 
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: calc(2rem + 8px);
+    right: 0;
+}
+.tag p {
+    font: var(--mono);
+    letter-spacing: var(--monokern);
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 4px;
+    margin-right: 1rem; 
+    margin-bottom: 0;
+    color: var(--white);
+    background: var(--tint);
+    backdrop-filter: var(--filter-effect)
+}
+
+
+.details, nav {
+    font: var(--mono);
+    letter-spacing: var(--monokern);
+    text-transform: uppercase; 
+    text-align: right;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: var(--black) 1px solid;
+    border-width: 1px 0;
+    background: var(--pink);
+/*
+    background: var(--black);
+    color: var(--white);
+*/
+}
+
+.details li span:first-child::after {
+    content: '→';
+    padding: 0 12px;
+}
+
+/* Nav */
+/*===============================================*/
+
+nav {
+    color: var(--black);
+    padding: 4px var(--page-margin) 4px calc(var(--page-margin) - 2ch);
+    margin-bottom: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+    background: var(--glass);
+    backdrop-filter: var(--filter-effect);
+    border-top: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/* Columns */
+/*===============================================*/
+
+.columns {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+}
+
+
+.col1 {
+    width: 40%;
+    height: 100%;
+    flex: 0 0 40%;
+    top: 0;
+    position: sticky;
+}
+
+
+.col2 {
+    width: 60%;
+    flex: 0 0 60%;
+    border-left: 1px solid var(--black);
+}
+
+/* Sections */
+/*===============================================*/
+
+.col2 h3 {
+    margin-top: 0;
+}
+
+section.summary {
+    padding: 6ch 6ch 6ch var(--page-margin);
+    margin-bottom: calc(var(--page-margin) / 2);
+}
+
+section h2 {
+    color: var(--pink);
+    background: var(--black);
+    padding: 0 6px;
+    margin-bottom: 0;
+}
+
+section:first-child h2:first-child {
+    border-top: none;
+}
+
+.spacearound {
+    padding: calc(var(--page-margin) / 2);
+}
+
+
+/* Images */
+/*===============================================*/
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: grayscale();
+}
+
+/*.shadow { box-shadow: var(--glass) 1px 1px 8px }*/
+
+.grid2 {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+}
+
+.grid3 {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+}
+
+.no-gap {
+    grid-gap: 0;
+}
+
+/*Display two images next to each other in a cool, responsive way*/
+.pair {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: center;
+}
+.left,
+.right {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+.pair .left { padding-right: 24px; border-right: var(--textmain) 1px solid; }
+.pair .right { padding-left: 24px; border-left: var(--textmain) 1px solid; }
+
+.pair .spacearound {
+    margin: 0 calc(var(--page-margin) / 2);
+    padding: calc(var(--page-margin) / 2) 0;
+}
+
+.pair img {
+    object-fit: contain;
+    
+}
+
+/*===============================================*/
+/* Responsive */
+/*===============================================*/
+
+@media screen and (max-width: 720px) {   
+    .columns {
+        display: block;
+    }
+    
+    .col1, .col2 {
+        position: static;
+        width: 100%;
+        margin: unset;
+    }
+    
+    .col1::before {
+        content: unset;
+        display: none;
+    }
+
+}
+
