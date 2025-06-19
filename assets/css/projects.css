@@ -249,7 +249,6 @@ img.active {
     grid-gap: 0;
 }
 
-
 /* Display two images next to each other in a cool, responsive way */
 .pair {
     display: flex;

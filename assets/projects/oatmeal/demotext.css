@@ -25,7 +25,6 @@
   font-variation-settings: "wght" var(--text-weight);
   border: none;
   resize: none;
-  overflow: hidden;
   width: 100%;
   background: inherit;
 }
