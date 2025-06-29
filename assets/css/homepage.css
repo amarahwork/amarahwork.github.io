@@ -69,12 +69,7 @@ main {
 ========================================================================== */
 
 .projects {
-    margin-top: 34vw;
-    padding: 1px;
-}
 
-.projects > h2 {
-    margin-left: var(--page-margin);
 }
 
 h2 {
@@ -90,9 +85,10 @@ h2 {
 }
 
 
-.projects > div {
+.projects {
     width: calc(100vw - 2px);
-    margin: 0 auto;
+    margin: 40vw auto 0 auto;
+    padding: 1px;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
@@ -102,7 +98,7 @@ h2 {
 }
 
 .project {
-    height: calc(33vw - 1px);
+    height: calc(25vw - 1px);
     display: block;
     backdrop-filter: blur(5px);
 }
