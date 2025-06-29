@@ -101,8 +101,8 @@ h2 {
 }
 
 .project {
-    width: calc(33.3vw - 1px);
-    height: calc(33.3vw - 1px);
+    width: calc(33vw - 1px);
+    height: calc(33vw - 1px);
     display: block;
     backdrop-filter: blur(5px);
 }
