@@ -180,16 +180,8 @@ section {
 }
 
 
-/* Images */
-/*===============================================*/
-
-.fill {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
 /* Grid */
+/*===============================================*/
 
 .grid {
     display: grid;
@@ -238,11 +230,25 @@ section {
     background: white;
 }
 
+/* Images */
+/*===============================================*/
+
 .grid img {
     display: block;
     width: 100%;
     height: 100%; 
     object-fit: cover;
+}
+
+.fill {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.center {
+    padding: var(--page-margin);
+    margin: 0 auto;
 }
 
 .square img {
