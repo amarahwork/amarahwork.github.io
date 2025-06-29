@@ -95,7 +95,7 @@ img {
     --accent: #ff665e;
     
     --glass: rgba(246,181,243,.6);
-    --tint: rgba(45,45,45,.6);
+    --tint: rgba(45,45,45,.9);
     --filter-effect: blur(5px);
     
     --page-margin: 8vw;
@@ -114,6 +114,7 @@ html {
 }
 
 body {
+    width: 100%;
     color: var(--black);
     font: var(--body);
     letter-spacing: .02rem;
