@@ -90,7 +90,7 @@ img {
 :root {
     --black: #454545;
     --gray: #797C8B;
-    --white: #ECE5F0;
+    --white: #f3f3f8;
     --pink: #F6B5F3;
     --accent: #ff665e;
     
@@ -98,7 +98,7 @@ img {
     --tint: rgba(45,45,45,.9);
     --filter-effect: blur(5px);
     
-    --page-margin: 8vw;
+    --page-margin: 4vw;
     
     --mono: normal 600 .65rem/1rem 'Consolas', 'Monaco', monospace;
     --monokern: .8pt;
