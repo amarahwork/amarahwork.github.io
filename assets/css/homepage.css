@@ -89,10 +89,6 @@ h2 {
     margin: 0;
 }
 
-h3 {
-    margin-top: 0;
-    margin-bottom: 1ch;
-}
 
 .projects > div {
     width: 100%;
@@ -119,6 +115,9 @@ h3 {
     display: block;
     text-decoration: none;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project a:hover {
@@ -133,6 +132,7 @@ h3 {
     text-transform: uppercase; 
     display: grid;
     grid-template-columns: 50% 50%;
+    margin-bottom: 1ch;
 }
 
 .label:first-of-type {
