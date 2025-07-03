@@ -3,7 +3,7 @@
 /*===============================================*/
 
 html {
-    background: var(--blueish);
+    background: var(--gray);
 }
 
 body {
@@ -21,10 +21,11 @@ header {
 
 header span {
     display: inline-block;
-    color: var(--gray);
+    color: var(--accent);
     font-size: 25vw;
     line-height: .7;
     letter-spacing: -3vw;
+    text-shadow: 1px 1px var(--gray), ;
 }
 
 header span:first-child {
@@ -52,10 +53,8 @@ main {
 
 .intro {
     font: var(--mono);
-    background: var(--screen);
-    backdrop-filter: var(--filter-effect);
-    padding: 4ch;
     margin: var(--page-margin);
+    background: var(--gray);
     position: fixed;
     z-index: 1001;
 }
@@ -64,14 +63,10 @@ main {
 /* projects
 ========================================================================== */
 
-.projects {
-
-}
-
 h2 {
     color: var(--black);
     font: var(--mono);
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: .5ch;
     line-height: 1;
     text-transform: uppercase;
@@ -97,16 +92,19 @@ h2 {
     font: var(--mono);
     height: calc(25vw - 1px);
     display: block;
-    backdrop-filter: blur(5px);
+}
+
+.project a, .intro {
+    padding: 2ch;
+    backdrop-filter: var(--filter-effect);
     box-shadow: -2px 2px var(--black);
+    border: 1px solid var(--black);
 }
 
 .project a {
-    color: var(--inherit);
+    color: var(--black);
     width: 100%;
     height: 100%;
-    border: 1px solid var(--black);
-    padding: 2ch;
     display: block;
     text-decoration: none;
     overflow-y: auto;
@@ -117,11 +115,12 @@ h2 {
 }
 
 .project a:hover {
-    color: var(--accent);
+    color: var(--gray);
     background: var(--tint);
+    border-color: var(--black);
 }
 .project a:hover h2 {
-    color: var(--highlight);
+    color: var(--accent);
 }
 
 .project .label {

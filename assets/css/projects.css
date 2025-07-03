@@ -31,7 +31,7 @@ header > * {
 
 header h1 {
     color: var(--black);
-    text-shadow: var(--highlight) -1px 1px, var(--blueish) -1px -1px;
+    text-shadow: var(--highlight) -1px 1px, var(--main) -1px -1px;
 }
 
 /*Details*/
@@ -162,6 +162,18 @@ section {
 
 .col1 section {
     padding: 6ch var(--page-margin);
+}
+
+.col1.summary section {
+    padding-left: 0;
+}
+
+.col1.summary h3 {
+    border-left: calc(var(--page-margin) - 1ch) solid var(--accent);
+    padding-left: 1ch;
+}
+.col1.summary p {
+    padding-left: var(--page-margin);
 }
 
 .columns h2:first-child {
