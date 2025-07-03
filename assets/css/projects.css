@@ -95,7 +95,7 @@ nav {
     border-top: none;
 }
 
-nav a, footer a {
+nav a, footer a, nav a:visited, footer a:visited {
     color: var(--inherit);
     text-decoration: none;
 }
