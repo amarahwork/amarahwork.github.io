@@ -100,6 +100,10 @@ nav a, footer a, nav a:visited, footer a:visited {
     text-decoration: none;
 }
 
+nav a:hover, footer a:hover {
+    color: var(--highlight);
+}
+
 footer {
     text-align: right;
     background: var(--white);
