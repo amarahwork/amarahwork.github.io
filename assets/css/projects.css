@@ -169,7 +169,7 @@ section {
 }
 
 .col1.summary h3 {
-    border-left: calc(var(--page-margin) - 1ch) solid var(--accent);
+    border-left: calc(var(--page-margin) - 1ch) solid var(--main);
     padding-left: 1ch;
 }
 .col1.summary p {

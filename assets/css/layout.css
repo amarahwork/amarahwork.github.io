@@ -93,7 +93,7 @@ img {
     --white: #DFDFDD;
     --main: #7972AB;
     --accent: #A580B7;
-    --highlight: #898911;
+    --highlight: #B5B535;
     
     --glass: rgba(165,128,183,.5);
     --screen: rgba(185,198,196,.8);
@@ -104,7 +104,7 @@ img {
     
     --mono: normal 600 .75rem/1.25rem 'Consolas', 'Monaco', monospace;
     --monokern: .8pt;
-    --body: normal normal 1rem/1.25rem 'Times New Roman', serif;
+    --body: normal normal 1rem/1.5rem 'Times New Roman', serif;
 }
 
 /**************************************************/
@@ -119,22 +119,22 @@ body {
     width: 100%;
     color: var(--black);
     font: var(--body);
-    letter-spacing: .02rem;
 }
 
 .highlight {
+    color: var(--black);
     display: inline-block;
-    background: var(--accent);
+    background: var(--highlight);
     font-weight: 600;
     padding: 1px 4px;
 }
 
 a, a:visited {
-    color: var(--highlight);
+    color: var(--main);
 }
 
 a:active, a:hover {
-    color: var(--accent);
+    color: var(--highlight);
 }
 
 p:not(:last-child) {

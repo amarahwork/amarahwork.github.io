@@ -3,7 +3,7 @@
 /*===============================================*/
 
 html {
-    background: var(--gray);
+    background: var(--accent);
 }
 
 body {
@@ -21,7 +21,7 @@ header {
 
 header span {
     display: inline-block;
-    color: var(--accent);
+    color: var(--main);
     font-size: 25vw;
     line-height: .7;
     letter-spacing: -3vw;
@@ -54,7 +54,7 @@ main {
 .intro {
     font: var(--mono);
     margin: var(--page-margin);
-    background: var(--gray);
+    background: var(--accent);
     position: fixed;
     z-index: 1001;
 }
@@ -111,7 +111,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--screen);
+    background: var(--glass);
 }
 
 .project a:hover {
