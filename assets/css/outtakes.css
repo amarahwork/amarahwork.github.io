@@ -42,7 +42,7 @@ main {
 }
 
 .project img.no-box {
-    box-shadow: none;
+    border: none;
 }
 
 .caption {

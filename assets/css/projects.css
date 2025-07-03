@@ -26,7 +26,7 @@ header {
 }
 
 header > * {
-    padding: 2rem var(--page-margin) 1rem var(--page-margin);
+    padding: 1ch var(--page-margin) 1rem var(--page-margin);
 }
 
 header h1 {
