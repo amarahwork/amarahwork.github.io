@@ -88,16 +88,16 @@ img {
 }
 
 :root {
-    --black: #454545;
-    --gray: #797C8B;
-    --white: #F8F3DD;
-    --purple: #9A72AA;
-    --accent: #8B9C3E;
-    --highlight: #F984CA;
+    --black: #394443;
+    --gray: #6D7E77;
+    --white: #F4F6F5;
+    --blueish: #B5DECC;
+    --accent: #C7D14F;
+    --highlight: #DA60C4;
     
-    --glass: rgba(242,113,144,.5);
-    --screen: rgba(248,243,221,.5);
-    --tint: rgba(45,45,45,.9);
+    --glass: rgba(218,96,196,.5);
+    --screen: rgba(181,222,204,.5);
+    --tint: rgba(57,68,67,.9);
     --filter-effect: blur(5px);
     
     --page-margin: 4vw;
@@ -130,11 +130,11 @@ body {
 }
 
 a, a:visited {
-    color: inherit;
+    color: var(--highlight);
 }
 
 a:active, a:hover {
-    color: var(--highlight);
+    color: var(--accent);
 }
 
 p:not(:last-child) {

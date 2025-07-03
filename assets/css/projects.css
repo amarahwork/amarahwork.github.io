@@ -31,7 +31,7 @@ header > * {
 
 header h1 {
     color: var(--black);
-    text-shadow: var(--purple) -1px 1px, var(--purple) -1px -1px;
+    text-shadow: var(--highlight) -1px 1px, var(--blueish) -1px -1px;
 }
 
 /*Details*/
@@ -90,12 +90,13 @@ nav {
     position: fixed;
     top: 0;
     z-index: 1001;
-    background: var(--screen);
+    background: var(--white);
     backdrop-filter: var(--filter-effect);
     border-top: none;
 }
 
 nav a, footer a {
+    color: var(--inherit);
     text-decoration: none;
 }
 

@@ -3,7 +3,7 @@
 /*===============================================*/
 
 html {
-    background: var(--white);
+    background: var(--blueish);
 }
 
 body {
@@ -21,7 +21,7 @@ header {
 
 header span {
     display: inline-block;
-    color: var(--accent);
+    color: var(--gray);
     font-size: 25vw;
     line-height: .7;
     letter-spacing: -3vw;
@@ -116,7 +116,7 @@ h2 {
 }
 
 .project a:hover {
-    color: var(--white);
+    color: var(--accent);
     background: var(--tint);
 }
 .project a:hover h2 {

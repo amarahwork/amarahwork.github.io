@@ -1,0 +1,85 @@
+/*===============================================*/
+/* outtakes */
+/*===============================================*/
+
+main {
+    margin: 0 auto;
+    padding-top: 4ch;
+}
+
+.project {
+    width: 66vw;
+    display: grid;
+    grid-gap: 1ch;
+    grid-auto-flow: column;
+    grid-template-rows: auto auto;
+}
+
+.project.left {
+    padding: 4ch 4ch 4ch var(--page-margin);
+    border: 2px solid var(--black);
+    border-width: 2px 2px 0 0;
+}
+
+.project.right {
+    margin-left: auto;
+    padding: 4ch var(--page-margin) 4ch 4ch;
+    border: 2px solid var(--black);
+    border-width: 2px 0 0 2px;
+}
+
+.project img {
+    flex: 1 1 50%;
+    height: unset;
+    object-fit: contain;
+/*    box-shadow: -2px 2px var(--black);*/
+}
+
+.project img.no-box {
+    box-shadow: none;
+}
+
+.caption {
+    background: var(--highlight);
+    padding: 1ch;
+    max-width: 36ch;
+    justify-self: flex-end;
+    align-self: flex-start;
+}
+
+.title {
+    font: var(--mono);
+    text-transform: uppercase;
+    letter-spacing: var(--monokern);
+}
+
+.grid {
+    grid-gap: 1ch;
+}
+
+/*===============================================*/
+/* Responsive */
+/*===============================================*/
+
+@media screen and (max-width: 720px) {
+    
+    main {
+        padding: var(--page-margin);
+        display: block;
+    }
+
+    .project {
+        width: 100%;
+
+    }
+    
+    .project.left, .project.right{
+        border: none;
+        padding: 0;
+    }
+
+    .caption {
+        
+    }
+}
+
