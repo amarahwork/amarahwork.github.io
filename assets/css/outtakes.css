@@ -7,32 +7,38 @@ main {
     padding-top: 4ch;
 }
 
+.grid {
+    margin: 0;
+    align-items: flex-start;
+}
+
 .project {
     width: 66vw;
-    display: grid;
-    grid-gap: 1ch;
-    grid-auto-flow: column;
-    grid-template-rows: auto auto;
+    border: 1px dotted var(--black);
 }
 
 .project.left {
-    padding: 4ch 4ch 4ch var(--page-margin);
-    border: 2px solid var(--black);
-    border-width: 2px 2px 0 0;
+    padding: 2ch 2ch 2ch var(--page-margin);
+    border-width: 1px 1px 0 0;
 }
 
 .project.right {
     margin-left: auto;
-    padding: 4ch var(--page-margin) 4ch 4ch;
-    border: 2px solid var(--black);
-    border-width: 2px 0 0 2px;
+    padding: 2ch var(--page-margin) 2ch 2ch;
+    border-width: 1px 0 0 1px;
+}
+
+.project.center {
+    width: 100%;
+    border-width: 1px 0;
+    margin-bottom: -1px;
 }
 
 .project img {
     flex: 1 1 50%;
     height: unset;
     object-fit: contain;
-/*    box-shadow: -2px 2px var(--black);*/
+    border: 1px solid var(--black);
 }
 
 .project img.no-box {
@@ -40,17 +46,27 @@ main {
 }
 
 .caption {
-    background: var(--highlight);
+    background: var(--white);
     padding: 1ch;
     max-width: 36ch;
-    justify-self: flex-end;
     align-self: flex-start;
+    border: 1px solid var(--black);
+    box-shadow: -2px 2px var(--black);
+}
+
+.caption.margin {
+    margin-top: 1ch;
+}
+
+.caption.right {
+    justify-self: flex-end;
 }
 
 .title {
     font: var(--mono);
     text-transform: uppercase;
     letter-spacing: var(--monokern);
+    word-break: keep-all;
 }
 
 .grid {
