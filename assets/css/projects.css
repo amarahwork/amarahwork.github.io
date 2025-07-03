@@ -31,7 +31,7 @@ header > * {
 
 header h1 {
     color: var(--black);
-    text-shadow: var(--pink) -1px 1px, var(--pink) -1px -1px;
+    text-shadow: var(--purple) -1px 1px, var(--purple) -1px -1px;
 }
 
 /*Details*/
@@ -69,11 +69,7 @@ header h1 {
     padding-bottom: 4px;
     border: var(--black) 1px solid;
     border-width: 1px 0;
-    background: var(--pink);
-/*
-    background: var(--black);
-    color: var(--white);
-*/
+    background: var(--white);
 }
 
 .details li span:first-child::after {
@@ -94,7 +90,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 1001;
-    background: var(--glass);
+    background: var(--screen);
     backdrop-filter: var(--filter-effect);
     border-top: none;
 }
@@ -105,8 +101,7 @@ nav a, footer a {
 
 footer {
     text-align: right;
-    color: var(--white);
-    background: var(--black);
+    background: var(--white);
 }
 
 footer a {

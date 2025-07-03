@@ -90,11 +90,13 @@ img {
 :root {
     --black: #454545;
     --gray: #797C8B;
-    --white: #f3f3f8;
-    --pink: #F6B5F3;
-    --accent: #ff665e;
+    --white: #F8F3DD;
+    --purple: #9A72AA;
+    --accent: #8B9C3E;
+    --highlight: #F984CA;
     
-    --glass: rgba(246,181,243,.6);
+    --glass: rgba(242,113,144,.5);
+    --screen: rgba(248,243,221,.5);
     --tint: rgba(45,45,45,.9);
     --filter-effect: blur(5px);
     
@@ -122,7 +124,7 @@ body {
 
 .highlight {
     display: inline-block;
-    background: var(--accent);
+    background: var(--highlight);
     font-weight: 600;
     padding: 1px 4px;
 }
@@ -132,7 +134,7 @@ a, a:visited {
 }
 
 a:active, a:hover {
-    color: var(--accent);
+    color: var(--highlight);
 }
 
 p:not(:last-child) {
