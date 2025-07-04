@@ -92,10 +92,10 @@ img {
     --gray: #B9C6C4;
     --white: #DFDFDD;
     --main: #7972AB;
-    --accent: #B285C8;
-    --highlight: #A9A93A;
+    --accent: #BC9AC9;
+    --highlight: #B285C8;
     
-    --glass: rgba(178,133,200,.5);
+    --glass: rgba(188,154,201,.5);
     --screen: rgba(185,198,196,.8);
     --tint: rgba(42,48,46,.9);
     --filter-effect: blur(5px);
@@ -124,7 +124,7 @@ body {
 .highlight {
     color: var(--black);
     display: inline-block;
-    background: var(--gray);
+    background: var(--highlight);
     font-weight: 600;
     padding: 1px 4px;
 }
