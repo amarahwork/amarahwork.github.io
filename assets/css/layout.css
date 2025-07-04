@@ -92,10 +92,10 @@ img {
     --gray: #B9C6C4;
     --white: #DFDFDD;
     --main: #7972AB;
-    --accent: #B185C7;
+    --accent: #B285C8;
     --highlight: #A9A93A;
     
-    --glass: rgba(184,134,209,.5);
+    --glass: rgba(178,133,200,.5);
     --screen: rgba(185,198,196,.8);
     --tint: rgba(42,48,46,.9);
     --filter-effect: blur(5px);
