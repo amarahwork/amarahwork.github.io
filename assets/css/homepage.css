@@ -77,7 +77,7 @@ h2 {
 
 
 .projects {
-    width: calc(100vw - 2px);
+    width: 100vw;
     margin: 32vw auto 0 auto;
     padding: var(--page-margin);
     display: grid;
