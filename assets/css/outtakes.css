@@ -95,7 +95,9 @@ main {
     }
 
     .caption {
-        
+        width: 100%;
+        max-width: unset;
+        margin: 1ch 0;
     }
 }
 
