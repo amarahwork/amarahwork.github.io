@@ -66,12 +66,13 @@
 /*Thumb for Firefox*/
 .controls input::-moz-range-thumb:hover,
 .controls input::-moz-range-thumb:active {
-    background: var(--purple);
+    background: var(--main);
 }
 
 /*Thumb for other browsers*/
+.controls input::-webkit-slider-thumb:hover,
 .controls input::-webkit-slider-thumb:active {
-    background: var(--purple);
+    background: var(--main);
 }
 
 @media screen and (max-width:910px) {

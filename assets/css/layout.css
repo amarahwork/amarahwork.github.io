@@ -93,7 +93,7 @@ img {
     --white: #DFDFDD;
     --main: #7972AB;
     --accent: #BC9AC9;
-    --highlight: #B285C8;
+    --highlight: #B9C6C4;
     
     --glass: rgba(188,154,201,.5);
     --screen: rgba(185,198,196,.8);
@@ -134,7 +134,7 @@ a, a:visited {
 }
 
 a:active, a:hover {
-    color: var(--highlight);
+    color: var(--accent);
 }
 
 p:not(:last-child) {
