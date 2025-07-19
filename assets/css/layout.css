@@ -65,6 +65,11 @@ img {
     max-width: 100%;
 }
 
+figure, figcaption {
+    padding: 0;
+    margin: 0;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -155,25 +160,19 @@ h1 {
     margin: 0;
 }
 
-h2, h3 {
-    font: var(--mono);
-    font-weight: 600;
-    letter-spacing: var(--monokern);
-    text-transform: uppercase;
-
-}
-
-h2 {
-    color: var(--accent);
-    margin-bottom: 4rem;
-    font-size: 1.5rem;
+h2 {   
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin: 4rem 0 2rem 0;
 }
 
 h3 {
     font: var(--mono);
     font-size: .8rem;
     font-weight: 600;
-     margin: 2rem 0 1rem 0;
+    letter-spacing: var(--monokern);
+    text-transform: uppercase;
+    margin: 2rem 0 1rem 0;
 }
 
 

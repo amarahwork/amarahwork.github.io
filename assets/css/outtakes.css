@@ -73,6 +73,13 @@ main {
     grid-gap: 1ch;
 }
 
+.moreleft {
+    grid-template-columns: 2fr 1fr;
+}
+.moreright {
+    grid-template-columns: 1fr 2fr;
+}
+
 /*===============================================*/
 /* Responsive */
 /*===============================================*/

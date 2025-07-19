@@ -5,9 +5,7 @@ $(function(){
             $(this).removeClass('active');
         } else {
             $('.square img').removeClass('active');
-            $(this).addClass('active');
-            location.assign( '#' + $(this).attr('id') );
+            $(this).addClass('active');    
         }
-
     });
 });     
