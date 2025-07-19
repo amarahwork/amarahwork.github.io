@@ -255,40 +255,12 @@ img.outline {
     width: calc(100% + var(--page-margin)); 
 }
 
+.fill img, .fill {
+    object-fit: cover !important;
+}
+
 .no-gap {
     grid-gap: 0;
-}
-
-/* Display two images next to each other in a cool, responsive way */
-.pair {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.left,
-.right {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
-.left { padding-right: 24px; }
-.right { padding-left: 24px; }
-
-.pair .spacearound {
-    margin: 0 calc(var(--page-margin) / 2);
-    padding: calc(var(--page-margin) / 2) 0;
-}
-
-.pair img {
-    object-fit: contain;
-}
-
-.columns .pair {
-    text-align: center;
-}
-.columns .left, .columns .right {
-    justify-content: center;
 }
 
 /* Text for Images */
