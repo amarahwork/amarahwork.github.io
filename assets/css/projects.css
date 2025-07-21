@@ -51,7 +51,6 @@ header h1 {
 .details, nav, footer {
     font: var(--mono);
     letter-spacing: var(--monokern);
-    text-transform: uppercase; 
     text-align: right;
     list-style: none;
     display: flex;
@@ -61,6 +60,10 @@ header h1 {
     border: var(--black) 1px solid;
     border-width: 1px 0;
     background: var(--white);
+}
+
+nav, footer {
+    text-transform: uppercase; 
 }
 
 .details li span:first-child::after {
@@ -293,7 +296,7 @@ figcaption {
     letter-spacing: var(--mono-kern);
 }
 figcaption span:last-child {
-    font-weight: normal;
+    font: var(--body);
     display: block;
     max-width: 64%;
 }
