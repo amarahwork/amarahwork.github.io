@@ -96,7 +96,7 @@ h2 {
 
 .project {
     font: var(--mono);
-    letter-spacing: .2ch;
+    letter-spacing: var(--monokern);
     height: calc(25vw - 1px);
     display: block;
 }
