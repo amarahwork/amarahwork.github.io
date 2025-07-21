@@ -59,6 +59,7 @@ main {
 
 .intro {
     font: var(--mono);
+    font-variant-ligatures: none;
     margin: var(--page-margin);
     background: var(--accent);
     position: fixed;
@@ -72,6 +73,7 @@ main {
 h2 {
     color: var(--black);
     font: var(--mono);
+    font-variant-ligatures: none;
     font-size: 2.5rem;
     letter-spacing: .5ch;
     line-height: 1;
@@ -96,6 +98,7 @@ h2 {
 
 .project {
     font: var(--mono);
+    font-variant-ligatures: none;
     letter-spacing: var(--monokern);
     height: calc(25vw - 1px);
     display: block;
@@ -148,7 +151,9 @@ h2 {
 .label > *:last-child {
     list-style: none;
     font: var(--mono);
+    font-variant-ligatures: none;
 }
+
 
 
 .projects .window {

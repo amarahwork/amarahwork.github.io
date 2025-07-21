@@ -35,6 +35,7 @@ header h1 {
 }
 .tag p {
     font: var(--mono);
+    font-variant-ligatures: none;
     letter-spacing: var(--monokern);
     line-height: 1;
     text-transform: uppercase;
@@ -50,6 +51,7 @@ header h1 {
 
 .details, nav, footer {
     font: var(--mono);
+    font-variant-ligatures: none;
     letter-spacing: var(--monokern);
     text-align: right;
     list-style: none;
@@ -293,6 +295,7 @@ img.outline {
 figcaption {
     padding-right: 6ch;
     font: var(--mono);
+    font-variant-ligatures: none;
     letter-spacing: var(--mono-kern);
 }
 figcaption span:last-child {
