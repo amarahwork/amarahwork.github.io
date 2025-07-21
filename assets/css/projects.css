@@ -1,5 +1,5 @@
 /*===============================================*/
-/* projects */
+/* Projects */
 /*===============================================*/
 
 body {
@@ -311,26 +311,23 @@ figcaption span:last-child {
         display: block;
     }
     
-    .col1, .col2 {
+    .columns > * {
         position: static;
         width: 100%;
         margin: unset;
     }
     
-    .col1 {
-        border-bottom: 1px solid var(--black);
+    .details {
+        display: block;
+        text-align: left;
     }
     
-    h2 {
-        padding-left: 6px;
-    }
-    
-    .pair {
+    section .grid {
         display: block;
     }
-    .pair .left, .pair .right {
-        width: 100%;
-        padding: unset;
+    
+    .grid .description {
+        margin: 4ch 0;
     }
 
 }

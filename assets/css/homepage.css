@@ -22,9 +22,9 @@ header {
 header span {
     display: inline-block;
     color: var(--main);
-    font-size: 25vw;
-    line-height: .7;
-    letter-spacing: -3vw;
+    text-shadow: var(--accent) -1px 1px, var(--black) -1px -1px;
+    font-size: 36vw;
+    line-height: .72;
     text-shadow: 1px 1px var(--gray), ;
 }
 
@@ -35,9 +35,11 @@ header span:first-child {
 
 header img {
     position: absolute;
+    object-position: top right;
+    object-fit: contain;
     top: 0;
-    right: -4vw;
-    width: 50vw;
+    right: -3.9vw;
+    width: 58vw;
     image-rendering: pixelated;
 }
 
@@ -90,6 +92,7 @@ h2 {
 
 .project {
     font: var(--mono);
+    letter-spacing: .2ch;
     height: calc(25vw - 1px);
     display: block;
 }
@@ -156,9 +159,16 @@ h2 {
 
 @media screen and (max-width: 860px) { 
     
-    .projects > div {
-        grid-template-columns: 50% 50%;
+    .intro {
+        position: static;
+        display: inline-block;
+        margin-top: 20vw;
+    }
+    
+    .projects {
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: unset;
+        margin-top: 0;
     }
     
     .project {
@@ -176,9 +186,18 @@ h2 {
     header, .intro {
         position: static;
     }
+    
+    .intro {
+        display: block;
+        margin-top: 0;
+    }
 
     main {
         margin-top: 1ch;
         display: block;
+    }
+    
+    .projects {
+        grid-template-columns: 1fr ;
     }
 }

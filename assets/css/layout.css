@@ -77,23 +77,25 @@ figure, figcaption {
 /**************************************************/
 /* Special */
 /**************************************************/
+
+/* Albertella Light by Moji Waku */
+/* https://moji-waku.com/albertella/index.html */
 @font-face {
-    font-family: 'AWConquerorDidot';
-    src: url(../fonts/l1_awcodi-bla-4_pro_ws_z01-4325dc72.woff2);
+    font-family: 'Albertella';
+    src: url(../fonts/albertela-light.otf);
 }
 
+
+/* KFひま字ドット by KF Studio */
+/* https://www.kfstudio.net/font/kfhimajidot/ */
 @font-face {
-    font-family: 'AWConquerorSans';
-    src: url(../fonts/l1_awcosa-dem-4_pro_ws_z01-8b9c2057.woff2);
-}
-@font-face {
-    font-family: 'AWConquerorSans';
-    src: url(../fonts/l1_awcosa-hea-4_pro_ws_z01-b79af8b0.woff2);
-    font-weight: bold;
+    font-family: 'KFHimajiDOT';
+    src: url(../fonts/kfhimajidot.otf);
 }
 
 :root {
     --black: #2A302E;
+    --black-alt: #344040;
     --gray: #B9C6C4;
     --white: #DFDFDD;
     --main: #7972AB;
@@ -107,9 +109,10 @@ figure, figcaption {
     
     --page-margin: 4vw;
     
-    --mono: normal 600 .75rem/1.25rem 'Consolas', 'Monaco', monospace;
-    --monokern: .8pt;
-    --body: normal normal 1rem/1.5rem 'Times New Roman', serif;
+    --mono: normal 600 .8rem/1.2rem 'KFHimajiDOT','Consolas', 'Monaco', monospace;
+    --monokern: 1pt;
+    --headers: normal normal 1rem/1rem 'Albertella', 'Times New Roman', serif;
+    --body: normal normal .8rem/1.35rem 'Tahoma', sans-serif;
 }
 
 /**************************************************/
@@ -152,23 +155,24 @@ hr {
 
 
 h1 {
-    font: var(--newspaper);
+    font: var(--headers);
+    letter-spacing: .25ch;
     color: var(--accent);
     text-transform: uppercase;
-    font-size: 6rem;
-    line-height: 4.5rem;
-    margin: 0;
+    margin-top: 1.5rem;
+    font-size: 8rem;
+    line-height: 4rem;
 }
 
-h2 {   
-    font-size: 3.5rem;
-    font-weight: 400;
+h2 {
+    font: var(--mono);
+    font-size: 2rem;
+    letter-spacing: .25ch;
     margin: 4rem 0 2rem 0;
 }
 
 h3 {
     font: var(--mono);
-    font-size: .8rem;
     font-weight: 600;
     letter-spacing: var(--monokern);
     text-transform: uppercase;
@@ -184,7 +188,7 @@ h3 {
     }
     
     h1 {
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
 }
