@@ -109,7 +109,7 @@ figure, figcaption {
     
     --page-margin: 4vw;
     
-    --mono: normal 600 .8rem/1.2rem 'KFHimajiDOT','Consolas', 'Monaco', monospace;
+    --mono: normal normal .8rem/1.2rem 'KFHimajiDOT','Consolas', 'Monaco', monospace;
     --monokern: 1pt;
     --headers: normal normal 1rem/1rem 'Albertella', 'Times New Roman', serif;
     --body: normal normal .8rem/1.35rem 'Tahoma', sans-serif;
