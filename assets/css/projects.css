@@ -23,6 +23,7 @@ header > * {
 header h1 {
     color: var(--black);
     text-shadow: var(--highlight) -1px 1px, var(--main) -1px -1px;
+    line-height: 6rem;
 }
 
 /*Details*/
@@ -62,6 +63,10 @@ header h1 {
     border: var(--black) 1px solid;
     border-width: 1px 0;
     background: var(--white);
+}
+
+.details {
+    text-transform: capitalize;
 }
 
 nav, footer {
