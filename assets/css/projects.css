@@ -11,7 +11,7 @@ body {
 
 header {
     position: relative;
-    background: var(--white) no-repeat center;
+    background: var(--white) no-repeat center fixed;
     background-size: cover;
     z-index: 100;
 }
