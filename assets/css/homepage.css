@@ -3,7 +3,7 @@
 /*===============================================*/
 
 :root {
-    --tile-columns: 12;
+    --tile-columns: 8;
 }
 
 @keyframes arrowPoint {
@@ -17,76 +17,109 @@
 ========================================================================== */
 
 body {
-    background: var(--secondary-muted);
+    background: var(--primary-muted);
 }
 
 header {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh + 1px);
     display: flex;
     position: relative;
     z-index: 1001;
-    background-image: url("../layout/sketchbook.png"), url("../layout/catcat.png");
-    background-size: cover, contain;
 }
 
-header, .cat {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top left;
+.cat {
+    background: url("../layout/catcat.png") no-repeat fixed left 15%;
+    background-size: 60vw;
 }
 
 .intro {
-    max-width: var(--max-page-size);
+    text-align: right;
     height: 100%;
-    padding: var(--page-margin) 1rem var(--page-margin) var(--page-margin);
+    border-right: 1px solid var(--black);
+    border-radius: 0 0 2rem 0;
     margin: 0 auto;
-    flex: 0 1 96%;
+    flex: 0 0 72vw;
     position: relative;
     z-index: 1;
-    pointer-events: none;
+    overflow: hidden;
+}
+
+.intro .cat {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: var(--page-margin) 2rem 2rem var(--page-margin);
 }
 
-.intro h1 {
-    color: var(--highlight);
-    font-size: 11vw;
+.intro, .scroll {
+    background: var(--secondary-muted) url("../layout/sketchbook.png") top left fixed;
+    background-size: cover;
+    border-bottom: 1px solid var(--black);
+}
+
+.full-mark {
+    display: none;
+}
+
+h1 {
+    letter-spacing: -.25rem;
+    font-size: 10vw;
     text-align: right;
     text-transform: lowercase;
-}
-
-.intro span {
-    letter-spacing: -.4ch
 }
 
 .intro ul {
     list-style: none;
 }
 
-.intro h3 {
-/*    color: var(--secondary);*/
+.intro h3:first-child {
+    margin-top: 0;
+}
+
+.dot {
+    font-size: 12rem;
+    position: absolute;
+    bottom: 4vw;
+    right: calc(28vw - .18ch);
+    z-index: 1002;
+    pointer-events: none;
+}
+
+.scroll {
+    letter-spacing: var(--monokern);
+    text-transform: uppercase;
+    padding: var(--page-margin) var(--page-margin) 2rem 2rem;
+    margin-left: -1px;
+    flex: 0 1 calc(28vw + 1px);
+    z-index: 1001;
+    border-left: 1px solid var(--black);
+    border-radius: 0 0 0 2rem;
+    background-position: top right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.scroll h1 {
+    text-align: left;
+    margin-left: -1rem;
 }
 
 .scroll-msg {
-    letter-spacing: var(--monokern);
-    text-transform: uppercase;
-    margin-right: var(--page-margin);
-    padding: var(--page-margin) 0 var(--page-margin) 1rem;
-    flex: 0 1 4%;
-    z-index: 1001;
-    pointer-events: none;
-    border-left: 1px solid var(--highlight);
+    height: 100%;
+    display: block;
 }
 
 .scroll-msg p {
+    top: 1ch;
+    position: sticky;
     color: var(--black);
     font: var(--mono);
     transform: rotate(90deg) translateY(-1rem);
     transform-origin: top left;
-    white-space: nowrap;
-    position: fixed;
+
 }
 
 .scroll-msg span {
@@ -107,19 +140,16 @@ main {
     width: 100%;
     max-width: unset;
     position: relative;
-    z-index: 1001;
+    top: -2rem;
     background: var(--primary-muted);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    position: relative;
     image-rendering: crisp-edges;
 }
 
-.cat {
-    padding: var(--page-margin);
-    background-image: url("../layout/catcat.png");
-    background-size: contain;
+main .cat {
+    padding: calc(var(--page-margin) + 2rem) var(--page-margin) var(--page-margin) var(--page-margin);
 }
 
 h2 {
@@ -196,25 +226,25 @@ h2 {
 ========================================================================== */
 
 .tiles {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding: 4px;
-    position: fixed;
-    z-index: -1;
+    position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
     display: grid;
     grid-gap: 4px;
     grid-template-columns: repeat(var(--tile-columns), 1fr);
     align-items: flex-start;
-    mix-blend-mode: overlay;
+    mix-blend-mode: color-burn;
 }
 .tile {
-    width: calc( ((100vw - 8px) / var(--tile-columns)) - 4px);
-    height: calc( ((100vw - 8px) / var(--tile-columns)) - 4px);
+    width: calc( ( (72vw - 9px) / var(--tile-columns)) - 4px);
+    height: calc( ( (72vw - 9px) / var(--tile-columns)) - 4px);
     display: block;
     border-radius: 11px;
-    background: var(--secondary-muted);
+    background: var(--primary);
     opacity: 0;
     transition: all .2s;
     transition-delay: 1s;
@@ -234,24 +264,47 @@ h2 {
         --tile-columns: 4;
     }
     
-    header, .cat {
+    header {
+        display: block;
+        height: 50vh;
+    }
+    
+    .intro {
+        width: 100%;
+        border-right: none;
+    }
+    
+    .cat {
         height: unset;
         background-size: 100%;
     }
     
-    header .intro {
+    .intro .cat {
+        width: 100%;
+        padding: var(--page-margin);
         flex-direction: column-reverse;
     }
     
-    .intro h1 {
+    h1 {
         text-align: left;
+        letter-spacing: inherit;
+    }
+    
+    .part-mark {
+        display: none;
+    }
+    .full-mark {
+        display: block;
+    }
+    .full-mark span {
+        letter-spacing: -.25ch;
     }
     
     h2 {
         font-size: 1.5rem;
     }
     
-    .scroll-msg, .tiles {
+    .scroll, .tiles {
         display: none;
     }
     
