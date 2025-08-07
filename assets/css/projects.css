@@ -323,7 +323,22 @@ figcaption span:last-child {
 /* Responsive */
 /*===============================================*/
 
-@media screen and (max-width: 720px) {   
+@media screen and (max-width: 720px) { 
+    
+    header {
+        display: block;
+    }
+    
+    h1 {
+        font-size: 4rem;
+        margin: var(--page-margin) 0 var(--page-margin-small) 0;
+    }
+    
+    .details {
+        border: none;
+        padding: none;
+    }
+    
     .columns {
         display: block;
     }

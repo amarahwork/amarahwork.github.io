@@ -179,7 +179,7 @@ h1 {
 
 h2 {
     font: var(--mono);
-    font-size: 2rem;
+    font-size: 4rem;
     letter-spacing: .25ch;
     margin: 4rem 0 2rem 0;
 }
@@ -213,7 +213,16 @@ button:hover {
 @media screen and (max-width: 720px) {   
     
     :root {
-        --page-margin: 20px;
+        --page-margin: 40px;
+        --page-margin-small: 20px;
+    }
+    
+    main {
+        max-width: unset;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
     }
 
 }
