@@ -10,29 +10,47 @@ body {
 /*===============================================*/
 
 header {
+    min-height: 64vh;
+    padding: var(--page-margin-small) var(--page-margin);
+    border-bottom: 1px solid var(--black);
+    display: flex;
     position: relative;
-    background: var(--white) no-repeat center fixed;
+    background: var(--primary-muted) no-repeat left;
     background-size: cover;
-    z-index: 100;
 }
 
-header > * {
-    padding: 1ch var(--page-margin) 1rem var(--page-margin);
-}
 
 header h1 {
+    flex: 0 0 64%;
+    align-self: flex-end;
     color: var(--black);
-    text-shadow: var(--highlight) -1px 1px, var(--main) -1px -1px;
-    line-height: 6rem;
 }
 
 /*Details*/
+
+.details {
+    padding-left: var(--page-margin-small);
+    border-left: 1px solid var(--black);
+}
+
+.details ul {
+    list-style: none;
+}
+
+.label {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1ch;
+}
+.label > *:first-child {
+    font-weight: bold;
+}
+
+
 .tag { 
     display: flex;
     align-items: center;
-    position: absolute;
-    top: calc(2rem + 8px);
-    right: 0;
+    margin-bottom: 2rem;
 }
 .tag p {
     font: var(--mono);
@@ -49,28 +67,11 @@ header h1 {
     backdrop-filter: var(--filter-effect)
 }
 
-
-.details, nav, footer {
-    font: var(--mono);
-    font-variant-ligatures: none;
-    letter-spacing: var(--monokern);
-    text-align: right;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    border: var(--black) 1px solid;
-    border-width: 1px 0;
-    background: var(--white);
+.deliverables {
+    margin-top: 2rem;
 }
-
-.details {
-    text-transform: capitalize;
-}
-
-nav, footer {
-    text-transform: uppercase; 
+.deliverables > a {
+    display: block;
 }
 
 .details li span:first-child::after {
@@ -82,18 +83,25 @@ nav, footer {
 /*===============================================*/
 
 nav, footer {
+    color: var(--white);
+    font: var(--mono);
+    font-variant-ligatures: none;
+    letter-spacing: var(--monokern);
+    text-align: right;
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
     padding: 4px var(--page-margin) 4px calc(var(--page-margin) - 2ch);
+    background: var(--black);
 }
 
+
 nav {
-    color: var(--black);
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1001;
-    background: var(--white);
-    backdrop-filter: var(--filter-effect);
-    border-top: none;
 }
 
 nav a, footer a, nav a:visited, footer a:visited {
@@ -102,12 +110,11 @@ nav a, footer a, nav a:visited, footer a:visited {
 }
 
 nav a:hover, footer a:hover {
-    color: var(--accent);
+    color: var(--primary);
 }
 
 footer {
     text-align: right;
-    background: var(--white);
 }
 
 footer a {
@@ -136,7 +143,7 @@ main .columns:only-child {
 }
 
 .summary h3 {
-    border-left: calc(var(--page-margin) - 1ch) solid var(--main);
+    border-left: calc(var(--page-margin) - 1ch) solid var(--primary);
     padding-left: 1ch;
 }
 
@@ -189,8 +196,8 @@ section {
 /* For screenshots */
 .grid.neater {
     background: var(--black);
-    grid-gap: var(--page-margin);
-    padding: var(--page-margin);
+    grid-gap: var(--page-margin-small);
+    padding: var(--page-margin-small);
 }
 .grid.neater * {
     border-radius: 6px;
@@ -298,10 +305,9 @@ img.outline {
 }
 
 figcaption {
+    margin-top: 1rem;
     padding-right: 6ch;
-    font: var(--mono);
-    font-variant-ligatures: none;
-    letter-spacing: var(--mono-kern);
+    font-weight: bold;
 }
 figcaption span:last-child {
     font: var(--body);

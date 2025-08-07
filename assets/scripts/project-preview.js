@@ -2,10 +2,10 @@
 $(function(){
     $(".project").mouseover(function() {
         let project = $(this).attr("id");
-        $("body").css("background-image", ("url(assets/layout/preview/" + project + ".gif)"));
+        $("main").css("background-image", ("url(assets/layout/preview/" + project + ".png)"));
     });
 
     $(".project").mouseout(function() {
-        $("body").css("background-image", "none");
+        $("main").css("background-image", "none");
     });
 });     

@@ -2,6 +2,10 @@
 /* outtakes */
 /*===============================================*/
 
+header {
+    min-height: unset;
+}
+
 main {
     margin: 0 auto;
     padding-top: 4ch;

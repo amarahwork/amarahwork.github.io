@@ -78,40 +78,51 @@ figure, figcaption {
 /* Special */
 /**************************************************/
 
-/* Albertella Light by Moji Waku */
-/* https://moji-waku.com/albertella/index.html */
+/* Isenheim Regular by Tunera and Benoit Ferran*/
+/* https://www.tunera.xyz/fonts/isenheim/ */
 @font-face {
-    font-family: 'Albertella';
-    src: url(../fonts/albertella-light.otf);
+    font-family: 'Ishheim';
+    src: url(../fonts/isenheim_regulier.otf);
 }
 
-
-/* KFひま字ドット by KF Studio */
-/* https://www.kfstudio.net/font/kfhimajidot/ */
+/* Hachipochi-Eight alphabet by Maniackers Design */
+/* https://mksd.jp/Hachipochi.html */
 @font-face {
-    font-family: 'KFHimajiDOT';
-    src: url(../fonts/kfhimajidot.otf);
+    font-family: 'Hachipochi';
+    src: url(../fonts/hachea.ttf);
 }
 
 :root {
-    --black: #2A302E;
-    --black-alt: #344040;
-    --gray: #B9C6C4;
-    --white: #DFDFDD;
-    --main: #7972AB;
-    --accent: #BC9AC9;
-    --highlight: #B9C6C4;
     
-    --glass: rgba(188,154,201,.5);
+    --black: #515062;
+    --white: #FAF8F9;
+    
+    --primary: #BDB3FF;
+    --primary-muted: #D2CCFA;
+    --secondary: #5D7BE8;
+    --secondary-muted: #B5DAFF;
+    
+    --highlight: #F5F7AC;
+    
+    --white-shadow_a: 2px 0 0 var(--white);
+    --white-shadow_b: -2px 0 0 var(--white);
+    --primary-shadow: -2px 2px 0 var(--primary);
+    --secondary-shadow: -2px 2px 0 var(--secondary);
+   
+    
     --screen: rgba(185,198,196,.8);
     --tint: rgba(42,48,46,.9);
-    --filter-effect: blur(5px);
+    --filter-effect: blur(2px);
     
-    --page-margin: 4vw;
+    --max-page-size: 1600px;
+    --page-margin: 6vw;
+    --page-margin-small: 4vw;
+    --page-margin_rev: -4vw;
     
-    --mono: normal normal .8rem/1.2rem 'KFHimajiDOT','Consolas', 'Monaco', monospace;
+    --mono: normal normal .8rem/1.2rem 'Hachipochi','Consolas', 'Monaco', monospace;
     --monokern: 1pt;
-    --headers: normal normal 1rem/1rem 'Albertella', 'Times New Roman', serif;
+    
+    --headers: normal normal 8rem/1 'Ishheim', 'Times New Roman', serif;
     --body: normal normal .8rem/1.35rem 'Tahoma', sans-serif;
 }
 
@@ -120,13 +131,19 @@ figure, figcaption {
 /**************************************************/
 
 html {
-    background: var(--white);
+    background: var(--primary);
 }
 
 body {
     width: 100%;
     color: var(--black);
     font: var(--body);
+    background: var(--white);
+}
+
+main {
+    max-width: var(--max-page-size);
+    margin: 0 auto;
 }
 
 .highlight {
@@ -137,11 +154,11 @@ body {
 }
 
 a, a:visited {
-    color: var(--main);
+    color: var(--secondary);
 }
 
 a:active, a:hover {
-    color: var(--accent);
+    color: var(--primary);
 }
 
 p:not(:last-child) {
@@ -155,12 +172,9 @@ hr {
 
 h1 {
     font: var(--headers);
-    letter-spacing: .25ch;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-top: 1.5rem;
-    font-size: 8rem;
-    line-height: 4rem;
+    letter-spacing: -.1rem;
+    text-transform: capitalize;
+    margin-bottom: -.45ch;
 }
 
 h2 {
@@ -177,16 +191,29 @@ h3 {
     margin: 2rem 0 1rem 0;
 }
 
+button {
+    font: var(--mono);
+    letter-spacing: var(--monokern);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 4px 12px 4px 4px;
+    border: none;
+    background: var(--highlight);
+    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0 100%);
+    transition: all .2s;
+}
+
+button:hover {
+    background: var(--primary);
+    padding-right: 16px;
+    padding-left: 8px;
+}
 
 
 @media screen and (max-width: 720px) {   
     
     :root {
         --page-margin: 20px;
-    }
-    
-    h1 {
-        font-size: 5rem;
     }
 
 }
