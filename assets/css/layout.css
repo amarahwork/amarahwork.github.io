@@ -168,7 +168,7 @@ a:active, a:hover {
 }
 
 p {
-    max-width: 66ch;
+    max-width: 30rem;
 }
 
 p:not(:last-child) {
