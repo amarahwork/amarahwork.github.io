@@ -138,8 +138,7 @@ footer a {
 
 .summary {
     background: var(--white);
-    width: calc(var(--max-page-size) * .4);
-    flex: 0 0 calc(var(--max-page-size) * .4);
+    width: 40%;
 }
 
 .summary h3 {
@@ -164,8 +163,7 @@ footer a {
 }
 
 .columns > *:last-child {
-    max-width: calc(var(--max-page-size) * .6);
-    flex: 0 1 calc(var(--max-page-size) * .6);
+    width: 60%;
 }
 
 
@@ -394,6 +392,10 @@ figcaption span:last-child {
     
     .grid .description {
         margin: 4ch 0;
+    }
+    
+    .flex {
+        display: block;
     }
 
 }
