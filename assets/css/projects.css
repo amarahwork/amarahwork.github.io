@@ -373,7 +373,7 @@ figcaption span:last-child {
         display: block;
     }
     
-    .columns > * {
+    .columns > *, .columns > *:first-child, .columns > *:last-child {
         position: static;
         width: 100%;
         margin: unset;
