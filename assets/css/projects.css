@@ -383,6 +383,10 @@ figcaption span:last-child {
         padding: var(--page-margin-small) var(--page-margin) var(--page-margin-small) 0;
     }
     
+    .grid {
+        margin: 0 auto;
+    }
+    
     section .grid2,  section .grid3 {
         display: block;
     }
