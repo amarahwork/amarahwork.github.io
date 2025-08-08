@@ -58,7 +58,7 @@
     appearance: none;
     width: 14px;
     height: 14px;
-    background: var(--accent);
+    background: var(--secondary);
     border: none;
     cursor: pointer;
 }

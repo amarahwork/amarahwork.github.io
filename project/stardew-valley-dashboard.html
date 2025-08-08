@@ -76,7 +76,26 @@
             </div>
         </div>
         <div>
+            
+            <section class="dark">
+                <article>
+                <h2>Research and Testing</h2>
+                    <div class="flex">
+                    <div class="description">
+                        <p>Initially, this project focused on crop pricing. We conducted EDA to establish trends in availability and effects of gameplay mechanics such as processing to increase in-game profits. We preseted some of these charts to three participants, along with rough paper wireframes, and asked them a series of question to guage understanding.</p>
+                        <p>Overall the participants struggled to interpret some of the labels of the graphs and the overall structure of the visualizations  including unclear axis titles and terminology such as “type of product” or “number of harvest”. Less advanced players expressed more confusion and less certainty over the purpose and functions of the visualizations. All participants spoke their questions aloud  while working through tasks, suggesting persistent ambiguity around how to get started or interact with the data effectively. One participant was unsure if clicking would reveal more information and didn’t initially realize the dashboard was interactive. Another initially missed that the visualizations required scrolling and expected immediate results from clicking the icons
+                        </p>
+                    </div>
+                    <figure>
+                        <img src="../assets/projects/stardew-dashboard/eda_max-earnings-dashboard.png" width="600px">
+                    <figcaption><span>Dashboard for yield and sell price for each crop</span><span>This was created for EDA, but served as an example that was later shown to participants</span></figcaption>
+                </figure>
+    
+                </div>       
+                </article>    
+            </section>
             <section>
+                <article>
                 <h2>Data Organization</h2>   
                 <p>For this project, we created tidy datasets for each item type (crops, fish, animal products) by referencing <a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki" rel="nofollow noreferrer">Stardew Valley Wiki</a> for relevant metadata about each item. For example, for crops, we collected the following information:</p>
                 <ul>
@@ -102,6 +121,7 @@
                 <br>
                 <p>We made deliberate decisions about which data to include and exclude. While our datasets are rich in numerical detail, we chose to omit broader global multipliers, like general profession-based price boosts, from most visualizations to avoid distorting trends across categories.</p>
                 <p>For use in the dashboard, the data is fed in by parsing the JSON in which it is stored and accessed further through key-value pairs. The charts and graphs of the dashboard change in accordance to the selected item.</p>
+                </article>    
             </section>
         </div>
     </main>

@@ -8,7 +8,7 @@
 html {
     line-height: 1.25;
     -webkit-text-size-adjust: 100%;
-    font-size: 12pt;
+    font-size: 12.5pt;
     scroll-behavior: smooth;
 }
 
@@ -45,7 +45,6 @@ h1 {
 
 p {
     margin: 0;
-    max-width: 68ch;
 }
 
 hr {
@@ -111,19 +110,27 @@ figure, figcaption {
    
     
     --screen: rgba(185,198,196,.8);
-    --tint: rgba(42,48,46,.9);
+    --tint: rgba(81,80,98,.8);
     --filter-effect: blur(2px);
     
-    --max-page-size: 1600px;
     --page-margin: 6vw;
     --page-margin-small: 4vw;
-    --page-margin_rev: -4vw;
+    --page-margin_rev: -6vw;
     
-    --mono: normal normal .8rem/1.2rem 'Hachipochi','Consolas', 'Monaco', monospace;
+    --gutter: 2vw;
+    
+    --max-page-size: calc(1400px + var(--page-margin) * 2);
+    
+    --span-half: calc( (var(--max-page-size) + (var(--gutter) * 2)) / 2 );
+    --span-quarter: calc( (var(--max-page-size) + (var(--gutter) * 4)) / 4 );
+    --span-one: calc( (var(--max-page-size) + (var(--gutter) * 6)) / 6 );
+        
+    
+    --mono: normal normal .65rem/1.2rem 'Hachipochi','Consolas', 'Monaco', monospace;
     --monokern: 1pt;
     
-    --headers: normal normal 8rem/1 'Ishheim', 'Times New Roman', serif;
-    --body: normal normal .8rem/1.35rem 'Tahoma', sans-serif;
+    --headers: normal normal 6rem/1 'Ishheim', 'Times New Roman', serif;
+    --body: normal normal .8rem/1.4rem 'Tahoma', sans-serif;
 }
 
 /**************************************************/
@@ -141,9 +148,8 @@ body {
     background: var(--white);
 }
 
-main {
+article {
     max-width: var(--max-page-size);
-    margin: 0 auto;
 }
 
 .highlight {
@@ -178,14 +184,17 @@ h1 {
 }
 
 h2 {
-    font: var(--mono);
-    font-size: 2rem;
-    letter-spacing: .25ch;
-    margin: 2rem 0 2rem 0;
+    font: var(--body);
+    letter-spacing: var(--monokern);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0;
+    border-bottom: 2px solid var(--primary);
 }
 
 h3 {
-    font: var(--mono);
+    font: var(--body);
+    font-weight: bold;
     letter-spacing: var(--monokern);
     text-transform: uppercase;
     margin: 2rem 0 1rem 0;

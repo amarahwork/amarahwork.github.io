@@ -4,15 +4,16 @@
 
 body {
     min-height: 100vh;
+    background: var(--white);
 }
 
 /* Header */
 /*===============================================*/
 
 header {
-    min-height: 64vh;
-    padding: var(--page-margin-small) var(--page-margin);
-    border-bottom: 1px solid var(--black);
+    min-height: 60vh;
+    padding: calc(32px + var(--page-margin-small)) var(--page-margin) var(--page-margin-small) var(--page-margin);
+    border-bottom: 2px solid var(--black);
     display: flex;
     position: relative;
     background: var(--primary-muted) no-repeat left;
@@ -21,16 +22,20 @@ header {
 
 
 header h1 {
-    flex: 0 0 64%;
+    flex-basis: calc(var(--max-page-size) * .6);
+    max-width: 1 0 calc(var(--max-page-size) * .6);
     align-self: flex-end;
     color: var(--black);
+    padding-right: calc(var(--gutter) / 2);
 }
 
 /*Details*/
 
 .details {
-    padding-left: var(--page-margin-small);
-    border-left: 1px solid var(--black);
+    flex-basis: calc(var(--max-page-size) * .4);
+    max-width: calc(var(--max-page-size) * .4);
+    padding-left: calc(var(--gutter) / 2);
+    border-left: 2px solid var(--black);
 }
 
 .details ul {
@@ -115,6 +120,7 @@ nav a:hover, footer a:hover {
 
 footer {
     text-align: right;
+    border-top: 2px solid var(--primary);
 }
 
 footer a {
@@ -127,24 +133,20 @@ footer a {
 .columns {
     display: flex;
     align-items: stretch;
-    border-bottom: 1px solid var(--black);
-}
-
-main .columns:only-child {
-    border-bottom: none;
+    background: var(--black);
 }
 
 .summary {
-    width: 36%;
-    height: 100%;
-    flex: 1 0 36%;
-    top: 0;
-    position: sticky;
+    background: var(--white);
+    width: calc(var(--max-page-size) * .4);
+    flex: 0 0 calc(var(--max-page-size) * .4);
 }
 
 .summary h3 {
-    border-left: calc(var(--page-margin) - 1ch) solid var(--primary);
-    padding-left: 1ch;
+    display: inline-block;
+    width: unset;
+    border-bottom: 2px solid var(--primary);
+    padding-left: var(--page-margin);
 }
 
 .summary div:first-child h3 {
@@ -156,7 +158,14 @@ main .columns:only-child {
 }
 
 .summary section {
-    padding: 6ch 6ch 6ch 0;
+    top: 0;
+    position: sticky;
+    padding: var(--page-margin-small) var(--gutter)  var(--page-margin-small) 0;
+}
+
+.columns > *:last-child {
+    max-width: calc(var(--max-page-size) * .6);
+    flex: 0 1 calc(var(--max-page-size) * .6);
 }
 
 
@@ -176,11 +185,17 @@ section {
     padding: calc(var(--page-margin) / 2);
 }
 
+.description {
+    max-width: calc(var(--max-page-size) * .4);
+    padding-right: var(--gutter);
+}
+
 
 /* Grid */
 /*===============================================*/
 
 .grid {
+    width: 100%;
     display: grid;
     grid-gap: 2px;
     position: relative;
@@ -192,15 +207,35 @@ section {
 .grid2 { grid-template-columns: 1fr 1fr; }
 .grid3 { grid-template-columns: 1fr 1fr 1fr; }
 
+.flex {
+    display: flex;
+}
+.flex > *:first-child {
+    flex-basis: 40%;
+    max-width: calc(var(--max-page-size) * .4);
+    flex-grow: 1;
+}
+.flex > *:last-child {
+    flex-basis: 60%;
+    flex-grow: 0;
+}
+
+.flex.opposite {
+    flex-direction: row-reverse;
+}
 
 /* For screenshots */
 .grid.neater {
     background: var(--black);
-    grid-gap: var(--page-margin-small);
-    padding: var(--page-margin-small);
+    grid-gap: var(--gutter);
+    padding: var(--page-margin);
 }
 .grid.neater * {
     border-radius: 6px;
+}
+
+section .grid.neater {
+    padding: 0;
 }
 
 .square {
@@ -208,12 +243,13 @@ section {
 }
 
 .dark {
+    color: var(--white);
     background: var(--black);
 }
 
 /* Use sparringly */
 .white {
-    background: white;
+    background: var(--white);
 }
 
 /* Images */
@@ -269,7 +305,8 @@ img.outline {
 .fill {
     object-fit: cover;
     height: 100%;
-    width: calc(100% + var(--page-margin)); 
+    width: calc(100% + var(--page-margin));
+    margin-right: var(--page-margin_rev)
 }
 
 .fill img, .fill {
@@ -293,24 +330,17 @@ img.outline {
     margin-top: 0;
 }
 
-.description {
-    margin: 0 6ch;
-}
-
-.grid .description:first-child {
-    margin-left: 0;
-}
-.grid .description:last-child {
-    margin-right: 0;
-}
-
 figcaption {
+    font-size: .6rem;
+    font-weight: 600;
+    line-height: .8rem;
+    letter-spacing: .5pt;
     margin-top: 1rem;
-    padding-right: 6ch;
-    font-weight: bold;
+    padding: 0 var(--gutter);
+    border-left: 2px solid var(--primary);
 }
 figcaption span:last-child {
-    font: var(--body);
+    font-weight: normal;
     display: block;
     max-width: 64%;
 }
@@ -337,6 +367,8 @@ figcaption span:last-child {
     .details {
         border: none;
         padding: none;
+        display: block;
+        text-align: left;
     }
     
     .columns {
@@ -349,13 +381,15 @@ figcaption span:last-child {
         margin: unset;
     }
     
-    .details {
-        display: block;
-        text-align: left;
+    .summary section {
+        padding: var(--page-margin-small) var(--page-margin) var(--page-margin-small) 0;
     }
     
-    section .grid {
+    section .grid2,  section .grid3 {
         display: block;
+    }
+    section .grid2 > *,  section .grid3 > & {
+        margin: var(--page-margin-small) 0;
     }
     
     .grid .description {

@@ -74,6 +74,10 @@ h1 {
     list-style: none;
 }
 
+.intro h3 {
+    font: var(--mono);
+}
+
 .intro h3:first-child {
     margin-top: 0;
 }
