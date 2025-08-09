@@ -166,6 +166,7 @@ h2 {
     text-transform: uppercase;
     text-align: justify;
     margin: 0 0 1ch 0;
+    border: none;
 }
 
 .projects {

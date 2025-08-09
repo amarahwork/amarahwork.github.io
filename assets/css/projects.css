@@ -4,6 +4,12 @@
 
 body {
     min-height: 100vh;
+    background: var(--black);
+}
+
+main {
+    max-width: var(--max-page-size);
+    margin: 0 auto;
     background: var(--white);
 }
 
@@ -120,7 +126,6 @@ nav a:hover, footer a:hover {
 
 footer {
     text-align: right;
-    border-top: 2px solid var(--primary);
 }
 
 footer a {
@@ -133,12 +138,11 @@ footer a {
 .columns {
     display: flex;
     align-items: stretch;
-    background: var(--black);
 }
 
 .summary {
-    background: var(--white);
     width: 40%;
+    flex: 1 0 40%;
 }
 
 .summary h3 {
@@ -164,6 +168,7 @@ footer a {
 
 .columns > *:last-child {
     width: 60%;
+    flex: 1 0 60%;
 }
 
 
@@ -174,7 +179,7 @@ footer a {
 /*Sections not in columns*/
 
 section {
-    padding: 6ch var(--page-margin);
+    padding: var(--page-margin);
 }
 
 /*Other spacing*/
@@ -184,8 +189,7 @@ section {
 }
 
 .description {
-    max-width: calc(var(--max-page-size) * .4);
-    padding-right: var(--gutter);
+    padding-right: var(--page-margin-small);
 }
 
 
@@ -212,10 +216,12 @@ section {
     flex-basis: 40%;
     max-width: calc(var(--max-page-size) * .4);
     flex-grow: 1;
+    flex-shrink: 0;
 }
-.flex > *:last-child {
+.flex > *:last-child:not(.grid) {
     flex-basis: 60%;
     flex-grow: 0;
+    align-self: flex-end;
 }
 
 .flex.opposite {
@@ -300,17 +306,6 @@ img.outline {
     object-fit: contain;
 }
 
-.fill {
-    object-fit: cover;
-    height: 100%;
-    width: calc(100% + var(--page-margin));
-    margin-right: var(--page-margin_rev)
-}
-
-.fill img, .fill {
-    object-fit: cover !important;
-}
-
 .no-gap {
     grid-gap: 0;
 }
@@ -328,19 +323,24 @@ img.outline {
     margin-top: 0;
 }
 
+figure {
+    display: flex;
+    flex-direction: column;
+}
+
 figcaption {
     font-size: .6rem;
     font-weight: 600;
-    line-height: .8rem;
+    line-height: .9rem;
     letter-spacing: .5pt;
-    margin-top: 1rem;
-    padding: 0 var(--gutter);
+    margin-top: var(--gutter);
+    padding-left: var(--gutter);
     border-left: 2px solid var(--primary);
 }
 figcaption span:last-child {
     font-weight: normal;
     display: block;
-    max-width: 64%;
+    max-width: 66ch;
 }
 
 .middle {

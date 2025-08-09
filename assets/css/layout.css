@@ -150,6 +150,7 @@ body {
 
 article {
     max-width: var(--max-page-size);
+    margin: 0 auto;
 }
 
 .highlight {
