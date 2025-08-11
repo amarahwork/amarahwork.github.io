@@ -8,7 +8,7 @@
 html {
     line-height: 1.25;
     -webkit-text-size-adjust: 100%;
-    font-size: 12.5pt;
+    font-size: 13pt;
     scroll-behavior: smooth;
 }
 
@@ -119,7 +119,7 @@ figure, figcaption {
     
     --gutter: 2vw;
     
-    --max-page-size: calc(1400px + var(--page-margin) * 2);
+    --max-page-size: 1400px;
     
     --span-half: calc( (var(--max-page-size) + (var(--gutter) * 2)) / 2 );
     --span-quarter: calc( (var(--max-page-size) + (var(--gutter) * 4)) / 4 );
@@ -146,11 +146,6 @@ body {
     color: var(--black);
     font: var(--body);
     background: var(--white);
-}
-
-article {
-    max-width: var(--max-page-size);
-    margin: 0 auto;
 }
 
 .highlight {

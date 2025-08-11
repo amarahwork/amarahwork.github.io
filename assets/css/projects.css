@@ -4,13 +4,11 @@
 
 body {
     min-height: 100vh;
-    background: var(--black);
 }
 
-main {
+header > div, article {
     max-width: var(--max-page-size);
     margin: 0 auto;
-    background: var(--white);
 }
 
 /* Header */
@@ -20,27 +18,31 @@ header {
     min-height: 60vh;
     padding: calc(32px + var(--page-margin-small)) var(--page-margin) var(--page-margin-small) var(--page-margin);
     border-bottom: 2px solid var(--black);
-    display: flex;
+
     position: relative;
     background: var(--primary-muted) no-repeat left;
     background-size: cover;
 }
 
+header > div {
+    width: 100%;
+    display: flex;
+}
+
 
 header h1 {
-    flex-basis: calc(var(--max-page-size) * .6);
-    max-width: 1 0 calc(var(--max-page-size) * .6);
+    width: 100%;
+    flex: 0 0 60%;
     align-self: flex-end;
     color: var(--black);
-    padding-right: calc(var(--gutter) / 2);
+    padding-right: var(--gutter);
 }
 
 /*Details*/
 
 .details {
-    flex-basis: calc(var(--max-page-size) * .4);
-    max-width: calc(var(--max-page-size) * .4);
-    padding-left: calc(var(--gutter) / 2);
+    flex: 0 0 40%;
+    padding-left:var(--gutter);
     border-left: 2px solid var(--black);
 }
 
@@ -103,7 +105,7 @@ nav, footer {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    padding: 4px var(--page-margin) 4px calc(var(--page-margin) - 2ch);
+    padding: 4px var(--page-margin) 4px calc(var(--page-margin) - 1.5ch);
     background: var(--black);
 }
 
@@ -113,6 +115,11 @@ nav {
     position: fixed;
     top: 0;
     z-index: 1001;
+}
+
+nav a, footer a {
+    display: block;
+    max-width: var(--max-page-size);
 }
 
 nav a, footer a, nav a:visited, footer a:visited {
@@ -143,32 +150,34 @@ footer a {
 .summary {
     width: 40%;
     flex: 1 0 40%;
+    max-width: calc(var(--max-page-size) * .4);
+    padding: var(--page-margin-small) var(--page-margin-small) var(--page-margin-small)  var(--page-margin);
+    margin-left: auto;
 }
 
 .summary h3 {
     display: inline-block;
     width: unset;
     border-bottom: 2px solid var(--primary);
-    padding-left: var(--page-margin);
 }
 
 .summary div:first-child h3 {
     margin-top: 0;
 }
 
-.summary p {
-    padding-left: var(--page-margin);
-}
-
 .summary section {
+    padding: unset;
     top: 0;
     position: sticky;
-    padding: var(--page-margin-small) var(--gutter)  var(--page-margin-small) 0;
 }
 
 .columns > *:last-child {
     width: 60%;
     flex: 1 0 60%;
+}
+
+.columns > *:last-child > * {
+    margin-right: auto;
 }
 
 
@@ -314,19 +323,22 @@ img.outline {
 /*===============================================*/
 
 .columns > *:last-child h3 {
+    font: var(--mono);
     background: var(--black);
-    margin: 2px 0;
-    padding: 4px 1ch;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 2px 4px;
     color: var(--white);
 }
 .columns > *:last-child h3:first-child {
     margin-top: 0;
 }
 
-figure {
-    display: flex;
-    flex-direction: column;
+
+.flex figure img {
+    margin: 0 auto;
 }
+
 
 figcaption {
     font-size: .6rem;
@@ -335,6 +347,7 @@ figcaption {
     letter-spacing: .5pt;
     margin-top: var(--gutter);
     padding-left: var(--gutter);
+    margin-right: var(--gutter);
     border-left: 2px solid var(--primary);
 }
 figcaption span:last-child {
@@ -343,17 +356,13 @@ figcaption span:last-child {
     max-width: 66ch;
 }
 
-.middle {
-    align-self: center;
-}
-
 /*===============================================*/
 /* Responsive */
 /*===============================================*/
 
 @media screen and (max-width: 720px) { 
     
-    header {
+    header > div {
         display: block;
     }
     
@@ -380,25 +389,23 @@ figcaption span:last-child {
     }
     
     .summary section {
-        padding: var(--page-margin-small) var(--page-margin) var(--page-margin-small) 0;
+        padding: var(--page-margin-small) var(--page-margin);
     }
     
     .grid {
         margin: 0 auto;
     }
     
-    section .grid2,  section .grid3 {
+    .grid2 {
         display: block;
     }
-    section .grid2 > *,  section .grid3 > & {
-        margin: var(--page-margin-small) 0;
-    }
     
-    .grid .description {
-        margin: 4ch 0;
+    .grid.neater {
+        padding: var(--page-margin-small);
     }
-    
-    .flex {
+
+    .flex, figure {
+        margin-top: var(--page-margin);
         display: block;
     }
 
