@@ -17,115 +17,116 @@
     </nav>
     <header style="background-image: url('../assets/layout/preview/stardew-valley-dashboard.png')">
         <div>
-        <h1>Stardew Valley Dashboard</h1>
-        <div class="details">
-            <div class="tag">
-                <p>Data Visualization</p>
-            </div>
-            <div>
-                <div class="label">
-                    <p>Year</p>
-                    <p>2025</p>
+            <h1>Stardew Valley Dashboard</h1>
+            <div class="details">
+                <div class="tag">
+                    <p>Data Visualization</p>
                 </div>
-                <div class="label">
-                    <p>Client</p>
-                    <p>Self-Directed (for fun)</p>
+                <div>
+                    <h3>Challenge</h3>
+                    <p>Between me and two of my friends, it was decided that existing tools to aid players in optimizing gameplay for the award-winning farming simulator game, Stardew Valley, were insufficient.</p>
                 </div>
-                <div class="label">
-                    <p>Deliverables</p>
-                    <p>Interactive Dashboard</p>
+                <div>
+                    <h3>Solution</h3>
+                    <p>We created three dashboards using Observable Plot to act as at-a-glance guides for the various qualities of in-game items. Item lookup is now much more efficient than navigating the widely-used <a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki" rel="nofollow noreferrer">Stardew Valley Wiki.</a></p>
                 </div>
-            </div>
-            <div>
-                <h3>Contributions</h3>
-                <p>Research, Dashboard Concept, Panel Design, Front-End Development</p>
-                <h3>Credits</h3>
-                <p>Rachel Fung and Anita Guo</p>
-                <p>Game-related imagery (buttons, item sprites, map, etc.) were borrowed directly from Stardew Valley, made by ConcernedApe.</p>
-            </div>
-            <div class="deliverables">
-                <a href="https://stardew-dashboard.github.io/"><button>Visit Live Dashboard</button></a>
             </div>
         </div>
-        </div>    
     </header>
-    <main>
-        <div class="columns">
-            <div class="summary">
-                <section>
-                    <div>
-                        <h3>Challenge</h3>
-                        <p>Between me and two of my friends, it was decided that existing tools to aid players in optimizing gameplay for the award-winning farming simulator game, Stardew Valley, were insufficient.</p>
+    <div class="container">
+        <aside>
+            <div>
+                <div>
+                    <div class="label">
+                        <p>Year</p>
+                        <p>2025</p>
                     </div>
-                    <div>
-                        <h3>Solution</h3>
-                        <p>We created three dashboards using Observable Plot to act as at-a-glance guides for the various qualities of in-game items. Item lookup is now much more efficient than navigating the widely-used <a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki" rel="nofollow noreferrer">Stardew Valley Wiki.</a></p>
+                    <div class="label">
+                        <p>Client</p>
+                        <p>Self-Directed (for fun)</p>
+                    </div>
+                    <div class="label">
+                        <p>Deliverables</p>
+                        <p>Interactive Dashboard</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Contributions</h3>
+                    <p>Research, Dashboard Concept, Panel Design, Front-End Development</p>
+                    <h3>Credits</h3>
+                    <p>Rachel Fung and Anita Guo</p>
+                    <p>Game-related imagery (buttons, item sprites, map, etc.) were borrowed directly from Stardew Valley, made by ConcernedApe.</p>
+                </div>
+                <div class="deliverables">
+                    <a href="https://stardew-dashboard.github.io/"><button>Visit Live Dashboard</button></a>
+                </div>
+            </div>
+        </aside>
+        <div class="progress"></div>
+            <main>
+                <section class="dark">
+                    <div class="grid grid1 neater">
+                        <div class="square">
+                            <img src="../assets/projects/stardew-dashboard/dashboard_crops.png">
+                        </div>
+                        <div class="square">
+                            <img src="../assets/projects/stardew-dashboard/dashboard_fish.png">
+                        </div>
+                        <div class="square">
+                            <img src="../assets/projects/stardew-dashboard/dashboard_animals.png">
+                        </div>
                     </div>
                 </section>
-            </div>
-            <div>
-                <div class="grid grid1 neater">
-                    <div class="square">
-                        <img src="../assets/projects/stardew-dashboard/dashboard_crops.png">
-                    </div>
-                    <div class="square">
-                        <img src="../assets/projects/stardew-dashboard/dashboard_fish.png">
-                    </div>
-                    <div class="square">
-                        <img src="../assets/projects/stardew-dashboard/dashboard_animals.png">
-                    </div>
-                </div> 
-            </div>
-        </div>
-        <div>
-            <section class="dark">
-                <article>
-                <h2>Research and Testing</h2>
-                    <div class="flex">
+                <section class="dark">
+                    <article>
+                            <div class="description">
+                                <h2>Research and Testing</h2>
+                                <p>Initially, this project focused on crop pricing. We conducted EDA to establish trends in availability and effects of gameplay mechanics such as processing to increase in-game profits. We preseted some of these charts to three participants, along with rough paper wireframes, and asked them a series of question to guage understanding.</p>
+                                <p>Overall the participants struggled to interpret some of the labels of the graphs and the overall structure of the visualizations including unclear axis titles and terminology such as “type of product” or “number of harvest”. Less advanced players expressed more confusion and less certainty over the purpose and functions of the visualizations. All participants spoke their questions aloud while working through tasks, suggesting persistent ambiguity around how to get started or interact with the data effectively. One participant was unsure if clicking would reveal more information and didn’t initially realize the dashboard was interactive. Another initially missed that the visualizations required scrolling and expected immediate results from clicking the icons.
+                                </p>
+                                <p>We did our best to address these issues in our final design, and realized that without sufficient instruction and labeling, even users that are passively familiar with the data will have a difficult time interpreting it.</p>
+                            </div>
+                            <div class="figures right">
+                                <figure>
+                                <img src="../assets/projects/stardew-dashboard/eda_max-earnings-dashboard.png" width="600px">
+                                <figcaption><span>Dashboard for yield and sell price for each crop</span><span>This was created for EDA, but served as an example that was later shown to participants</span></figcaption>
+                                </figure>
+                            </div>
+                    </article>
+                </section>
+                <section>
+                    <article>
                         <div class="description">
-                            <p>Initially, this project focused on crop pricing. We conducted EDA to establish trends in availability and effects of gameplay mechanics such as processing to increase in-game profits. We preseted some of these charts to three participants, along with rough paper wireframes, and asked them a series of question to guage understanding.</p>
-                            <p>Overall the participants struggled to interpret some of the labels of the graphs and the overall structure of the visualizations  including unclear axis titles and terminology such as “type of product” or “number of harvest”. Less advanced players expressed more confusion and less certainty over the purpose and functions of the visualizations. All participants spoke their questions aloud  while working through tasks, suggesting persistent ambiguity around how to get started or interact with the data effectively. One participant was unsure if clicking would reveal more information and didn’t initially realize the dashboard was interactive. Another initially missed that the visualizations required scrolling and expected immediate results from clicking the icons.
-                            </p>
-                            <p>We did our best to address these issues in our final design, and realized that without sufficient instruction and labeling, even users that are passively familiar with the data will have a difficult time interpreting it.</p>
-                        </div>
-                        <figure>
-                            <img src="../assets/projects/stardew-dashboard/eda_max-earnings-dashboard.png" width="600px">
-                            <figcaption><span>Dashboard for yield and sell price for each crop</span><span>This was created for EDA, but served as an example that was later shown to participants</span></figcaption>
-                        </figure>
-                    </div>    
-                </article>    
+                            <h2>Data Organization</h2>
+                            <p>For this project, we created tidy datasets for each item type (crops, fish, animal products) by referencing <a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki" rel="nofollow noreferrer">Stardew Valley Wiki</a> for relevant metadata about each item. For example, for crops, we collected the following information:</p>
+                            <ul>
+                                <li>Crop name</li>
+                                <li>Crop type ( fruit, tree, vegetable, forageable, flower, other)</li>
+                                <li>Season availability (Spring, Summer, Fall, Winter)</li>
+                                <li>Seed price</li>
+                                <li>Days to initial harvest</li>
+                                <li>Days to regrow (for multi-yield crops)</li>
+                                <li>Yield per harvest</li>
+                                <li>Maximum number of harvests per season</li>
+                                <li>Harvest frequency under different fertilizers: Speed-Gro, Deluxe Speed-Gro, Hyper Speed-Gro</li>
+                                <li>Impact of the Agriculturist profession on fertilizer-enhanced growth rates</li>
+                                <li>Base sell price by quality: Normal, Silver, Gold, Iridium</li>
+                                <li>Tiller profession price multipliers by quality</li>
+                                <li>Keg product output (Juice, Wine) and:</li>
+                                <li>Base and Artisan profession prices by quality</li>
+                                <li>Preserves Jar output (Pickle, Jelly) and:</li>
+                                <li>Base and Artisan profession prices by quality</li>
+                                <li>Dehydrator product (Dried Fruit, Dried Mushroom) and:</li>
+                                <li>Base and Artisan profession prices by quality</li>
+                            </ul>
+                            <br>
+                            <p>We made deliberate decisions about which data to include and exclude. While our datasets are rich in numerical detail, we chose to omit broader global multipliers, like general profession-based price boosts, from most visualizations to avoid distorting trends across categories.</p>
+                            <p>For use in the dashboard, the data is fed in by parsing the JSON in which it is stored and accessed further through key-value pairs. The charts and graphs of the dashboard change in accordance to the selected item.</p>
+                        </div>  
+                    </article>  
             </section>
-            <section>
-                <article>
-                <h2>Data Organization</h2>   
-                <p>For this project, we created tidy datasets for each item type (crops, fish, animal products) by referencing <a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki" rel="nofollow noreferrer">Stardew Valley Wiki</a> for relevant metadata about each item. For example, for crops, we collected the following information:</p>
-                <ul>
-                    <li>Crop name</li>
-                    <li>Crop type ( fruit, tree, vegetable, forageable, flower, other)</li>
-                    <li>Season availability (Spring, Summer, Fall, Winter)</li>
-                    <li>Seed price</li>
-                    <li>Days to initial harvest</li>
-                    <li>Days to regrow (for multi-yield crops)</li>
-                    <li>Yield per harvest</li>
-                    <li>Maximum number of harvests per season</li>
-                    <li>Harvest frequency under different fertilizers: Speed-Gro, Deluxe Speed-Gro, Hyper Speed-Gro</li>
-                    <li>Impact of the Agriculturist profession on fertilizer-enhanced growth rates</li>
-                    <li>Base sell price by quality: Normal, Silver, Gold, Iridium</li>
-                    <li>Tiller profession price multipliers by quality</li>
-                    <li>Keg product output (Juice, Wine) and:</li>
-                    <li>Base and Artisan profession prices by quality</li>
-                    <li>Preserves Jar output (Pickle, Jelly) and:</li>
-                    <li>Base and Artisan profession prices by quality</li>
-                    <li>Dehydrator product (Dried Fruit, Dried Mushroom) and:</li>
-                    <li>Base and Artisan profession prices by quality</li>
-                </ul>
-                <br>
-                <p>We made deliberate decisions about which data to include and exclude. While our datasets are rich in numerical detail, we chose to omit broader global multipliers, like general profession-based price boosts, from most visualizations to avoid distorting trends across categories.</p>
-                <p>For use in the dashboard, the data is fed in by parsing the JSON in which it is stored and accessed further through key-value pairs. The charts and graphs of the dashboard change in accordance to the selected item.</p>
-                </article>    
-            </section>
-        </div>
-    </main>
+        </main>
+    </div>
     <footer>
         <a href="gobituary-rekindled">Next Project &rarr;</a>
     </footer>

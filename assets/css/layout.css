@@ -8,7 +8,7 @@
 html {
     line-height: 1.25;
     -webkit-text-size-adjust: 100%;
-    font-size: 13pt;
+    font-size: 12pt;
     scroll-behavior: smooth;
 }
 
@@ -115,9 +115,8 @@ figure, figcaption {
     
     --page-margin: 6vw;
     --page-margin-small: 4vw;
-    --page-margin_rev: -6vw;
     
-    --gutter: 2vw;
+    --gutter: 2rem;
     
     --max-page-size: 1400px;
     
@@ -129,8 +128,9 @@ figure, figcaption {
     --mono: normal normal .65rem/1.2rem 'Hachipochi','Consolas', 'Monaco', monospace;
     --monokern: 1pt;
     
-    --headers: normal normal 6rem/1 'Ishheim', 'Times New Roman', serif;
-    --body: normal normal .8rem/1.4rem 'Tahoma', sans-serif;
+    --headers: normal normal 8rem/1 'Ishheim', 'Times New Roman', serif;
+    --body: normal normal 1rem/1.5rem 'Tahoma', sans-serif;
+    --body-smaller: normal normal .8rem/1.2rem 'Tahoma', sans-serif;
 }
 
 /**************************************************/
@@ -145,6 +145,7 @@ body {
     width: 100%;
     color: var(--black);
     font: var(--body);
+    letter-spacing: .25pt;
     background: var(--white);
 }
 
@@ -156,7 +157,7 @@ body {
 }
 
 a, a:visited {
-    color: var(--secondary);
+    color: var(--highlight);
 }
 
 a:active, a:hover {
@@ -179,6 +180,7 @@ hr {
 h1 {
     font: var(--headers);
     letter-spacing: -.1rem;
+    word-spacing: -.75rem;
     text-transform: capitalize;
     margin-bottom: -.45ch;
 }
@@ -194,7 +196,6 @@ h2 {
 
 h3 {
     font: var(--body);
-    font-weight: bold;
     letter-spacing: var(--monokern);
     text-transform: uppercase;
     margin: 2rem 0 1rem 0;
@@ -219,19 +220,17 @@ button:hover {
 }
 
 
-@media screen and (max-width: 720px) {   
+@media screen and (max-width: 786px) {   
     
     :root {
         --page-margin: 40px;
         --page-margin-small: 20px;
-    }
-    
-    main {
-        max-width: unset;
+        --gutter: 10px;
     }
     
     h1 {
-        font-size: 1.5rem;
+        font-size: 4rem;
+        margin-bottom: 1rem;
     }
 
 }
