@@ -344,12 +344,12 @@ footer a {
     main, aside {
         max-width: unset;
         width: 100%;
-        padding: var(--page-margin);
+        padding: var(--page-margin-small);
     }
     
     section {
         padding: unset;
-        margin: var(--page-margin) 0;
+        padding: var(--page-margin) var(--page-margin-small);
     }
     
     .figures {
