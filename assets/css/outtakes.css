@@ -9,6 +9,8 @@ header {
 main {
     margin: 0 auto;
     padding-top: 4ch;
+    color: var(--black);
+    background: var(--white);
 }
 
 .grid {
