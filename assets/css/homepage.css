@@ -75,9 +75,11 @@ h1 {
 
 .dot {
     font-size: 12rem;
+    margin-left: -.38ch;
+    margin-right: -.2ch;
     position: absolute;
-    bottom: 4vw;
-    right: calc(36vw + 1.85rem);
+    left: 0;
+    bottom: 1vw;
     z-index: 1002;
     pointer-events: none;
 }
@@ -133,7 +135,7 @@ h1 {
 ========================================================================== */
 
 .intro h1 {
-    position: absolute;
+        position: absolute;
     bottom: 2rem;
 }
 
