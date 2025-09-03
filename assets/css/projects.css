@@ -4,7 +4,6 @@
 
 body {
     min-height: 100vh;
-    background: var(--black);
 }
 
 .container {
@@ -16,7 +15,6 @@ header {
 }
 
 main {
-    color: var(--white);
     flex: 1 0 64%;
 }
 
@@ -25,8 +23,6 @@ aside {
     max-width: calc( var(--max-page-size) * .36);
     flex: 0 0 36%;
     padding: var(--gutter) var(--gutter) var(--page-margin-small) var(--page-margin);
-    background: var(--black);
-    color: var(--white);
 }
 
 aside > div {
@@ -45,7 +41,7 @@ aside > div {
 header {
     font: var(--body-smaller);
     padding: calc(32px + var(--page-margin-small)) var(--page-margin) var(--page-margin-small) var(--page-margin);
-    border-bottom: 2px solid var(--black);
+    border-bottom: 1px solid var(--black);
     position: relative;
     background: var(--primary-muted) no-repeat left;
     background-size: cover;
@@ -73,7 +69,7 @@ header h1 {
 header .details {
     flex: 0 0 36%;
     padding-left:var(--gutter);
-    border-left: 2px solid var(--black);
+    border-left: 1px solid var(--black);
 }
 
 /* Aside */
@@ -84,6 +80,10 @@ header .details {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 1ch;
+}
+
+.label > *:last-child {
+    font-weight: normal;
 }
 
 .tag { 
@@ -177,7 +177,7 @@ figcaption {
     margin-top: var(--gutter);
     padding-left: var(--gutter);
     margin-right: var(--gutter);
-    border-left: 2px solid var(--primary);
+    border-left: 1px solid var(--primary);
 }
 figcaption span:last-child {
     font-weight: normal;
@@ -319,7 +319,7 @@ nav a:hover, footer a:hover {
 }
 
 footer {
-    border-top: 2px solid var(--primary);
+    border-top: 1px solid var(--primary);
     text-align: right;
 }
 

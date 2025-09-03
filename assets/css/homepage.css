@@ -17,7 +17,7 @@
 ========================================================================== */
 
 body {
-    background: var(--primary-muted);
+    background: var(--white);
 }
 
 header {
@@ -34,12 +34,11 @@ header {
 }
 
 .intro {
-    text-align: right;
     height: 100%;
     border-right: 1px solid var(--black);
     border-radius: 0 0 2rem 0;
     margin: 0 auto;
-    flex: 0 0 72vw;
+    flex: 1 0 calc(64vw - var(--page-margin));
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -49,12 +48,11 @@ header {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: var(--page-margin) 2rem 2rem var(--page-margin);
+    padding: var(--page-margin) 0 2rem 0;
 }
 
 .intro, .scroll {
-    background: var(--secondary-muted) url("../layout/sketchbook.png") top left fixed;
+    background: var(--primary) url("../layout/sketchbook.png") top left fixed;
     background-size: cover;
     border-bottom: 1px solid var(--black);
 }
@@ -64,39 +62,28 @@ header {
 }
 
 h1 {
+    text-align: right;
     letter-spacing: -.25rem;
     font-size: 10vw;
     text-align: right;
     text-transform: lowercase;
 }
 
-.intro ul {
-    list-style: none;
-}
-
-.intro h3 {
-    font: var(--mono);
-}
-
-.intro h3:first-child {
-    margin-top: 0;
-}
-
 .dot {
     font-size: 12rem;
     position: absolute;
     bottom: 4vw;
-    right: calc(28vw - .18ch);
+    right: calc(36vw + 1.85rem);
     z-index: 1002;
     pointer-events: none;
 }
 
 .scroll {
     letter-spacing: var(--monokern);
-    text-transform: uppercase;
     padding: var(--page-margin) var(--page-margin) 2rem 2rem;
     margin-left: -1px;
-    flex: 0 1 calc(28vw + 1px);
+    flex: 0 0 calc(36vw + var(--page-margin));
+    max-width: calc( (var(--max-page-size) * .36) + var(--page-margin) );
     z-index: 1001;
     border-left: 1px solid var(--black);
     border-radius: 0 0 0 2rem;
@@ -116,12 +103,11 @@ h1 {
     display: block;
 }
 
-.scroll-msg p {
+.scroll-msg > * {
     top: 1ch;
     position: sticky;
-    color: var(--black);
-    font: var(--mono);
     transform: rotate(90deg) translateY(-1rem);
+    margin-top: 1rem;
     transform-origin: top left;
 
 }
@@ -135,6 +121,53 @@ h1 {
 .scroll-msg span:nth-child(3) {
     animation-delay: .5s;
 }
+
+
+/* Introduction
+========================================================================== */
+
+.intro h1 {
+    position: absolute;
+    bottom: 2rem;
+}
+
+.intro ul {
+    list-style: none;
+}
+
+.intro h3, .intro table {
+    margin-bottom: 0;
+}
+
+.intro h3:first-child {
+    margin-top: 0;
+}
+
+.intro li, .intro h1, .intro td:first-child, .pitch {
+    padding-right: 2rem;
+    padding-left: var(--page-margin);
+}
+
+.intro li {
+    border-bottom: 1px solid var(--black);
+}
+
+.intro td:first-child {
+    text-align: right;
+    width: 50%;
+}
+
+.intro td.title {
+    text-align: left;
+}
+
+.intro tr {
+    border-bottom: 1px solid var(--black);
+}
+
+.pitch {
+    margin-top: 1rem;
+}
  
 
 /* Projects
@@ -144,43 +177,41 @@ main {
     width: 100%;
     max-width: unset;
     position: relative;
-    top: -2rem;
-    background: var(--primary-muted);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
     image-rendering: crisp-edges;
 }
 
+main, .project a {
+    background-color: var(--white);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
 main .cat {
-    padding: calc(var(--page-margin) + 2rem) var(--page-margin) var(--page-margin) var(--page-margin);
+    padding: 50vh 0 0 0;
+    margin-top: -50vh;
+    background-image: url(../layout/catcat_alt.png);
 }
 
 h2 {
-    font: var(--mono);
-    letter-spacing: var(--monokern);
-    font-size: 2rem;
-    font-variant-ligatures: none;
     line-height: 1;
-    text-transform: uppercase;
     text-align: justify;
     margin: 0 0 1ch 0;
     border: none;
 }
 
 .projects {
-    max-width: var(--max-page-size);
+    width: 36vw;
+    max-width: calc(var(--max-page-size) * .36);
     padding: var(--page-margin) 0;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: var(--page-margin);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: calc(var(--gutter) / 2);
 }
 
 .project {
-    font: var(--mono);
     font-variant-ligatures: none;
+    margin-bottom: var(--page-margin-small);
 }
 
 .project a {
@@ -194,17 +225,15 @@ h2 {
     color: var(--black);
     text-decoration: none;
     transition: all .2s;
+    box-shadow: 1px 1px 0 var(--white);
 }
 
 .project a:hover {
-    background: var(--secondary-muted);
-}
-.project a:hover h2 {
-    color: var(--accent);
+    background-color: var(--primary-muted);
+    margin-left: -2rem;
 }
 
 .project .label {
-    text-transform: uppercase; 
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 1ch;
@@ -220,7 +249,6 @@ h2 {
 
 .label > *:last-child {
     list-style: none;
-    font: var(--mono);
     font-variant-ligatures: none;
 }
 
@@ -243,8 +271,8 @@ h2 {
     mix-blend-mode: color-burn;
 }
 .tile {
-    width: calc( ( (72vw - 9px) / var(--tile-columns)) - 4px);
-    height: calc( ( (72vw - 9px) / var(--tile-columns)) - 4px);
+    width: calc( ( (64vw - 9px) / var(--tile-columns)) - 4px);
+    height: calc( ( (64vw - 9px) / var(--tile-columns)) - 4px);
     display: block;
     border-radius: 11px;
     background: var(--primary);
@@ -275,6 +303,7 @@ h2 {
     .intro {
         width: 100%;
         border-right: none;
+        border-radius: unset;
     }
     
     .cat {
@@ -286,6 +315,19 @@ h2 {
         width: 100%;
         padding: var(--page-margin);
         flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+    
+    .intro table, .intro .pitch {
+        display: none;
+    }
+    
+    .intro h1 {
+        position: static;
+    }
+    
+    .intro h1, .intro li {
+        padding-left: 0;
     }
     
     h1 {
@@ -303,23 +345,13 @@ h2 {
         letter-spacing: -.25ch;
     }
     
-    h2 {
-        font-size: 1.5rem;
-    }
-    
     .scroll, .tiles {
         display: none;
     }
     
     .projects {
-        display: block;
-        padding: 0;
-    }
-    
-    .project {
-        margin-bottom: var(--page-margin-small);
-    }
-    
-        
+        margin: 0 auto;
+        width: unset;
+    }    
 
 }

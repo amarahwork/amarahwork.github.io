@@ -94,19 +94,14 @@ figure, figcaption {
 :root {
     
     --black: #515062;
-    --white: #FAF8F9;
+    --white: #DBDFE0;
     
-    --primary: #BDB3FF;
-    --primary-muted: #D2CCFA;
-    --secondary: #5D7BE8;
-    --secondary-muted: #B5DAFF;
+    --primary: #FBB5F9;
+    --primary-muted: #FFD9FB;
+    --secondary: #D85CD4;
     
-    --highlight: #F5F7AC;
+    --highlight: #0078bf;
     
-    --white-shadow_a: 2px 0 0 var(--white);
-    --white-shadow_b: -2px 0 0 var(--white);
-    --primary-shadow: -2px 2px 0 var(--primary);
-    --secondary-shadow: -2px 2px 0 var(--secondary);
    
     
     --screen: rgba(185,198,196,.8);
@@ -119,18 +114,16 @@ figure, figcaption {
     --gutter: 2rem;
     
     --max-page-size: 1400px;
-    
-    --span-half: calc( (var(--max-page-size) + (var(--gutter) * 2)) / 2 );
-    --span-quarter: calc( (var(--max-page-size) + (var(--gutter) * 4)) / 4 );
-    --span-one: calc( (var(--max-page-size) + (var(--gutter) * 6)) / 6 );
         
     
-    --mono: normal normal .65rem/1.2rem 'Hachipochi','Consolas', 'Monaco', monospace;
+    --mono: normal bold .65rem/1.2rem 'Hachipochi','Consolas', 'Monaco', monospace;
     --monokern: 1pt;
     
-    --headers: normal normal 8rem/1 'Ishheim', 'Times New Roman', serif;
+    --headers: normal normal 6rem/1 'Ishheim', 'Times New Roman', serif;
+    --subheaders: normal 600 2rem/1 'Ishheim', 'Times New Roman', serif;
     --body: normal normal 1rem/1.5rem 'Tahoma', sans-serif;
-    --body-smaller: normal normal .8rem/1.2rem 'Tahoma', sans-serif;
+    
+    --body-smaller: normal normal .8rem/1.25rem 'Tahoma', sans-serif;
 }
 
 /**************************************************/
@@ -157,7 +150,7 @@ body {
 }
 
 a, a:visited {
-    color: var(--highlight);
+    color: var(--secondary);
 }
 
 a:active, a:hover {
@@ -173,7 +166,7 @@ p:not(:last-child) {
 }
 
 hr {
-    border: var(--accent) 1px solid;
+    border: var(--black) 1px solid;
 }
 
 
@@ -186,34 +179,39 @@ h1 {
 }
 
 h2 {
-    font: var(--body);
-    letter-spacing: var(--monokern);
-    text-transform: uppercase;
-    font-weight: bold;
+    font: var(--subheaders);
     margin: 2rem 0 1rem 0;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--black);
 }
 
 h3 {
-    font: var(--body);
-    letter-spacing: var(--monokern);
-    text-transform: uppercase;
+    font-weight: bold;
     margin: 2rem 0 1rem 0;
 }
 
+h3, .small-caps, .label {
+    font: var(--body-smaller);
+    font-size: .7rem;
+    line-height: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 button {
+    color: var(--white);
     font: var(--mono);
     letter-spacing: var(--monokern);
     text-transform: uppercase;
     text-decoration: none;
     padding: 4px 12px 4px 4px;
     border: none;
-    background: var(--highlight);
+    background: var(--black);
     clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0 100%);
     transition: all .2s;
 }
 
 button:hover {
+    color: var(--black);
     background: var(--primary);
     padding-right: 16px;
     padding-left: 8px;
