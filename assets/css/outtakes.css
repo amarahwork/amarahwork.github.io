@@ -53,6 +53,7 @@ main {
 }
 
 .caption {
+    font: var(--body-smaller);
     background: var(--white);
     padding: 1ch;
     max-width: 36ch;
