@@ -135,7 +135,7 @@ h1 {
 ========================================================================== */
 
 .intro h1 {
-        position: absolute;
+    position: absolute;
     bottom: 2rem;
 }
 
@@ -253,7 +253,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 1ch;
-    margin-left: 50%;
+    margin-left: 36%;
 }
 
 .project .label:first-of-type {
@@ -267,6 +267,10 @@ h2 {
 .label > *:last-child {
     font-weight: normal;
     list-style: none;
+}
+
+.label li {
+    margin-bottom: .5rem;
 }
 
 
