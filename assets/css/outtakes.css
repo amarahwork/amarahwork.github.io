@@ -4,6 +4,7 @@
 
 header {
     min-height: unset;
+    background: none;
 }
 
 main {
