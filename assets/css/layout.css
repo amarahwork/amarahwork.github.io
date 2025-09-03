@@ -193,6 +193,7 @@ h3, .small-caps, .label {
     font: var(--body-smaller);
     font-size: .7rem;
     line-height: 1.2rem;
+    letter-spacing: .05rem;
     text-transform: uppercase;
     font-weight: bold;
 }

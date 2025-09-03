@@ -13,6 +13,10 @@
     100% { margin-left: 0px }
 }
 
+h1, h2, .heart {
+    text-shadow: -1px 1px var(--white);
+}
+
 /* Header and Introduction
 ========================================================================== */
 
@@ -109,6 +113,8 @@ h1 {
     transform: rotate(90deg) translateY(-1rem);
     margin-top: 1rem;
     transform-origin: top left;
+    font-weight: 600;
+    letter-spacing: var(--monokern);
 
 }
 
@@ -166,9 +172,18 @@ h1 {
 }
 
 .pitch {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
- 
+
+header .small-caps {
+    font-weight: normal;
+    letter-spacing: .05rem;
+}
+
+.heart {
+    font: var(--mono);
+}
+
 
 /* Projects
 ========================================================================== */
@@ -210,7 +225,6 @@ h2 {
 }
 
 .project {
-    font-variant-ligatures: none;
     margin-bottom: var(--page-margin-small);
 }
 
@@ -237,19 +251,20 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 1ch;
+    margin-left: 50%;
+}
+
+.project .label:first-of-type {
+    margin-top: 2rem;
 }
 
 .label:first-of-type {
     margin-bottom: 1rem;
 }
 
-.label:first-of-type > *:last-child {
-    text-align: right;
-}
-
 .label > *:last-child {
+    font-weight: normal;
     list-style: none;
-    font-variant-ligatures: none;
 }
 
 
