@@ -35,6 +35,7 @@ header {
 .cat {
     background: url("../layout/catcat.png") no-repeat fixed left 15%;
     background-size: 60vw;
+    image-rendering: crisp-edges;
 }
 
 .intro {
