@@ -1,5 +1,5 @@
 $(function(){
-    $('.square img').click(function() {
+    $('.square').click(function() {
 
         if( $(this).hasClass('active') ){
             $(this).removeClass('active');
