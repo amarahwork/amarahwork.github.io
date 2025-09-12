@@ -245,13 +245,10 @@ figcaption span:last-child {
     margin: 0 auto;
 }
 
-.square, .square.active img:hover {
+.square {
     filter: grayscale();
     opacity: .8;
     mix-blend-mode: multiply;
-}
-
-.square img {
     cursor: pointer;
 }
 
@@ -280,7 +277,7 @@ figcaption span:last-child {
     margin: var(--page-margin);
     border: 1px solid var(--black);
     background: var(--screen);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(3px) contrast(2) saturate(3);
     left: 0;
     top: 0;
 }
@@ -289,15 +286,15 @@ figcaption span:last-child {
     width: auto;
     max-height: calc(100% - 3rem);
     margin-top: 1rem;
-    box-shadow: -1px 1px var(--white);
 }
 
 .square.active::after {
     content: 'Click again to close.';
-    font: var(--mono);
-    letter-spacing: var(--mono-kern);
-    font-weight: 600;
+    color: var(--white);
+    text-shadow: 1px 1px var(--black), -1px -1px var(--black), 1px 0px var(--primary);
+    letter-spacing: 1pt;
     margin-top: 1rem;
+    text-shadow: ;
 }
 
 img.outline {
