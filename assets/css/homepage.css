@@ -17,6 +17,10 @@ h1, h2, .heart {
     text-shadow: -1px 1px var(--white);
 }
 
+li {
+    max-width: unset;
+}
+
 /* Header and Introduction
 ========================================================================== */
 
