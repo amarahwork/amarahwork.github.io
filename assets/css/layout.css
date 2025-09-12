@@ -201,6 +201,18 @@ h3, .small-caps, .label {
     font-weight: bold;
 }
 
+
+summary {
+    cursor: pointer;
+}
+summary:hover {
+    color: var(--secondary);
+}
+.small {
+    font: var(--body-smaller);
+    text-transform: initial;
+}
+
 button {
     color: var(--white);
     font: var(--mono);
