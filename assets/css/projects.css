@@ -58,6 +58,7 @@ header > div {
 header .title {
     width: 100%;
     flex: 1 0 64%;
+/*    max-width: calc(var(--max-page-size) * .64);*/
     align-self: flex-end;
     color: var(--black);
     padding-right: var(--gutter);
@@ -145,6 +146,7 @@ section:last-child {
 }
 
 section > * {
+/*    max-width: calc(var(--max-page-size) * .64);*/
     margin-right: auto;
 }
 
