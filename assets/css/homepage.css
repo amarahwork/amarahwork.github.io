@@ -190,6 +190,8 @@ header .small-caps {
 
 .heart {
     font: var(--mono);
+    text-align: right;
+    float: right;
 }
 
 
