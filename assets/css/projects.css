@@ -23,6 +23,7 @@ aside {
     max-width: calc( var(--max-page-size) * .36);
     flex: 0 0 36%;
     padding: var(--gutter) var(--gutter) var(--page-margin-small) var(--page-margin);
+    border-right: 1px solid var(--black);
 }
 
 aside > div {

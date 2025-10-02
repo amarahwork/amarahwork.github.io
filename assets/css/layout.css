@@ -94,7 +94,7 @@ figure, figcaption {
 :root {
     
     --black: #515062;
-    --white: #DBDFE0;
+    --white: #f3f3f3;
     
     --primary: #FBB5F9;
     --primary-muted: #FFD9FB;
@@ -118,7 +118,7 @@ figure, figcaption {
     --mono: normal bold .65rem/1.2rem 'Hachipochi','Consolas', 'Monaco', monospace;
     --monokern: 1pt;
     
-    --headers: normal normal 6rem/1 'Ishheim', 'Times New Roman', serif;
+    --headers: normal normal 4.5rem/1 'Ishheim', 'Times New Roman', serif;
     --subheaders: normal 600 2rem/1 'Ishheim', 'Times New Roman', serif;
     --body: normal normal 1rem/1.5rem 'Tahoma', sans-serif;
     
@@ -184,7 +184,7 @@ h1 {
 h2 {
     font: var(--subheaders);
     margin: 2rem 0 1rem 0;
-    border-bottom: 2px solid var(--black);
+    border-bottom: 1px solid var(--black);
 }
 
 h3 {
