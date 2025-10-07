@@ -2,91 +2,55 @@
 /* outtakes */
 /*===============================================*/
 
-header {
-    min-height: unset;
-    background: none;
-}
+/* Jump Links */
 
-main {
-    margin: 0 auto;
-    padding-top: 4ch;
-    color: var(--black);
-    background: var(--white);
-}
-
-.grid {
-    margin: 0;
-    align-items: flex-start;
-}
-
-.project {
-    width: 66vw;
-    border: 1px dotted var(--black);
-}
-
-.project.left {
-    padding: 2ch 2ch 2ch var(--page-margin);
-    border-width: 1px 1px 0 0;
-}
-
-.project.right {
-    margin-left: auto;
-    padding: 2ch var(--page-margin) 2ch 2ch;
-    border-width: 1px 0 0 1px;
-}
-
-.project.center {
-    width: 100%;
-    border-width: 1px 0;
-    margin-bottom: -1px;
-}
-
-.project img {
-    flex: 1 1 50%;
-    height: unset;
-    object-fit: contain;
-    border: 1px solid var(--black);
-}
-
-.project img.no-box {
+aside {
+    padding-left: 0;
+    padding-right: 0;
     border: none;
 }
 
-.caption {
-    font: var(--body-smaller);
-    background: var(--white);
-    padding: 1ch;
-    max-width: 36ch;
-    align-self: flex-start;
-    border: 1px solid var(--black);
-    box-shadow: -2px 2px var(--black);
+aside a {
+    text-decoration: none;
 }
 
-.caption.margin {
-    margin-top: 1ch;
+aside p {
+    margin-left: var(--page-margin);
 }
 
-.caption.right {
-    justify-self: flex-end;
+aside button {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    text-align: right;
+    padding-right: var(--gutter);
+    margin-bottom: 1px;
 }
 
-.title {
-    font: var(--mono);
-    text-transform: uppercase;
-    letter-spacing: var(--monokern);
-    word-break: keep-all;
+aside button:hover {
+    width: calc(100% + var(--gutter));
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+.project .grid:first-child img {
+    height: 100%;
+    align-self: center;
 }
 
 .grid {
-    grid-gap: 1ch;
+    margin: calc(var(--gutter) / 2) 0;
+    align-items: stretch;
 }
 
-.moreleft {
-    grid-template-columns: 2fr 1fr;
+.grid .grid {
+    margin: 0;
 }
-.moreright {
-    grid-template-columns: 1fr 2fr;
+
+.grid4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 
 /*===============================================*/
 /* Responsive */
@@ -94,25 +58,26 @@ main {
 
 @media screen and (max-width: 720px) {
     
-    main {
-        padding: var(--page-margin);
-        display: block;
+    aside button {
+        text-align: left;
+        clip-path: unset;
+        padding-left: var(--page-margin);
     }
-
-    .project {
-        width: 100%;
-
+    aside button:hover {
+        padding-left: calc(var(--page-margin) * 2);
     }
     
-    .project.left, .project.right{
-        border: none;
-        padding: 0;
+    .grid3, .grid4 {
+        display: grid;
     }
-
-    .caption {
-        width: 100%;
-        max-width: unset;
-        margin: 1ch 0;
+    
+    section {
+        display: none;
     }
+    
+    section:target {
+        display: block;
+    }
+    
 }
 

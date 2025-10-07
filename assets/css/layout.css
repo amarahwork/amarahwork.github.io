@@ -133,12 +133,12 @@ html {
     background: var(--primary);
 }
 
-body {
-    width: 100%;
+body { 
     color: var(--black);
     font: var(--body);
     letter-spacing: .25pt;
     background: var(--white);
+    scroll-behavior: smooth;
 }
 
 .highlight {
@@ -171,7 +171,6 @@ p:not(:last-child), ol, ul {
 hr {
     border: var(--black) 1px solid;
 }
-
 
 h1 {
     font: var(--headers);

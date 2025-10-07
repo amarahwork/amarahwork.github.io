@@ -4,6 +4,11 @@
 
 body {
     min-height: 100vh;
+/*
+    margin: var(--gutter);
+    width: calc(100% - (var(--gutter) * 2));
+    border: 1px solid var(--dark);
+*/
 }
 
 .container {
@@ -22,7 +27,7 @@ aside {
     font: var(--body-smaller);
     max-width: calc( var(--max-page-size) * .36);
     flex: 0 0 36%;
-    padding: var(--gutter) var(--gutter) var(--page-margin-small) var(--page-margin);
+    padding: var(--gutter) var(--page-margin) var(--page-margin-small) var(--page-margin);
     border-right: 1px solid var(--black);
 }
 
