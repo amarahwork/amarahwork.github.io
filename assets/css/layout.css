@@ -110,7 +110,7 @@ figure, figcaption {
     --page-margin: 6vw;
     --page-margin-small: 4vw;
     
-    --gutter: 2rem;
+    --gutter: 1rem;
     
     --max-page-size: 1400px;
         
@@ -161,7 +161,7 @@ header a:active, header a:hover {
 }
 
 p, li {
-    max-width: 33rem;
+    max-width: 68ch;
 }
 
 p:not(:last-child), ol, ul {
@@ -182,8 +182,6 @@ h1 {
 
 h2 {
     font: var(--subheaders);
-    margin: 2rem 0 1rem 0;
-    border-bottom: 1px solid var(--black);
 }
 
 h3 {

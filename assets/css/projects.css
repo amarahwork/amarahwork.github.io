@@ -11,15 +11,20 @@ body {
 */
 }
 
-.container {
-    display: flex;
-}
-
 header {
     margin-top: calc(1rem + 8px);
 }
 
-main {
+.details ul {
+    list-style: none;
+}
+
+#work {
+    display: flex;
+}
+
+
+#work main {
     flex: 1 0 64%;
 }
 
@@ -36,11 +41,6 @@ aside > div {
     position: sticky;
 }
 
-.details ul {
-    list-style: none;
-}
-
-
 /* Header */
 /*===============================================*/
 
@@ -49,8 +49,6 @@ header {
     padding: calc(32px + var(--page-margin-small)) var(--page-margin) var(--page-margin-small) var(--page-margin);
     border-bottom: 1px solid var(--black);
     position: relative;
-    background: var(--primary-muted) no-repeat left;
-    background-size: cover;
 }
 
 header > div {
@@ -58,6 +56,16 @@ header > div {
     height: 100%;
     display: flex;
     align-items: flex-end;
+}
+
+header, .section-header {
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    background-color: var(--primary-muted);
+}
+.section-header {
+    background-position: bottom left;
 }
 
 
@@ -88,6 +96,17 @@ header .details {
     flex: 0 0 36%;
     padding-left:var(--gutter);
     border-left: 1px solid var(--black);
+}
+
+.section-header {
+    padding: var(--page-margin) var(--page-margin) var(--gutter) var(--page-margin);
+    border: 1px solid var(--black);
+    border-width: 1px 0;
+    text-align: right;
+}
+
+header .title, .section-header {
+    text-shadow: -2px 2px var(--primary-muted);
 }
 
 /* Aside */
@@ -136,37 +155,33 @@ header .details {
     padding: 0 12px;
 }
 
-/* Main Section */
+/* Final Comp */
 /*===============================================*/
 
-section {
-    padding: var(--gutter) var(--page-margin) var(--page-margin-small) var(--gutter);
+#work main {
+    padding: var(--gutter);
 }
 
-section:not(.white):first-child {
-    padding-top: var(--gutter);
+/* Process */
+/*===============================================*/
+
+h2 {
+    padding: 2rem 0 1rem 1ch;
+    border-left: calc(var(--page-margin) - 1ch) solid var(--black);
+    border-bottom: 2px solid var(--black);
+    margin-bottom: 1rem;
 }
 
-section:last-child {
-    padding-bottom: var(--gutter);
+article h3:not(:first-child) {
+    margin-top: 2rem;
 }
 
-section > * {
-/*    max-width: calc(var(--max-page-size) * .64);*/
-    margin-right: auto;
+article {
+    padding-bottom: var(--page-margin);
 }
 
-section.no-gap {
-    padding-bottom: 0;
-}
-
-section h2 {
-    margin-top: 0;
-}
-
-
-.description {
-    grid-column: 1 / span 2;
+article > div {
+    padding: 0 var(--page-margin);
 }
 
 .figures.full {
@@ -197,15 +212,39 @@ figcaption span:last-child {
 }
 
 
+quote {
+    text-shadow: -2px 2px var(--primary);
+    font: var(--headers);
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 1rem;
+}
+quote::before {
+    content: '“';
+    margin-left: -1ch;
+}
+quote::after {
+    content: '”';
+}
+
+.testinfo {
+    margin: 1rem 0;
+    border: 1px solid var(--primary);
+    padding: var(--gutter) calc(var(--gutter) * 2);
+}
+.testinfo h3 { margin-top: 0; }
+
+
+
 /* Grid */
 /*===============================================*/
 
 .grid {
     width: 100%;
     display: grid;
-    grid-gap: calc(var(--gutter) / 2);
+    grid-gap: var(--gutter);
     position: relative;
-    margin-bottom: calc(var(--gutter) / 2);
+    margin-bottom: var(--gutter);
 }
 
 .grid:only-child { margin-bottom: 0; }
@@ -215,6 +254,8 @@ figcaption span:last-child {
 .grid1 { grid-template-columns: auto; }
 .grid2 { grid-template-columns: 1fr 1fr; }
 .grid3 { grid-template-columns: 1fr 1fr 1fr; }
+
+.grid:last-child { margin-bottom: 0; }
 
 /* For screenshots */
 .grid.neater * {
@@ -374,6 +415,10 @@ footer a {
     
     header > div {
         display: block;
+    }
+    
+    header h1:only-child {
+        margin-bottom: unset; 
     }
     
     .container {
