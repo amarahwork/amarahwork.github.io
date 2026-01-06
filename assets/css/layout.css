@@ -238,8 +238,8 @@ button:hover {
 @media screen and (max-width: 786px) {   
     
     :root {
-        --page-margin: 40px;
-        --page-margin-small: 20px;
+        --page-margin: 24px;
+        --page-margin-small: 18px;
         --gutter: 10px;
     }
     

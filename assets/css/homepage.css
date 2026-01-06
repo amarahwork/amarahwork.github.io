@@ -378,8 +378,12 @@ h2 {
     }
     
     .projects {
-        margin: 0 auto;
+        margin: 0 var(--gutter);
         width: unset;
-    }    
+    }
+    
+    .project a:hover, .project .label {
+        margin-left: unset;
+    }
 
 }

@@ -25,7 +25,11 @@ header {
 
 
 #work main {
-    flex: 1 0 64%;
+    flex: 1 1 64%;
+}
+
+main.black {
+    background: var(--black);
 }
 
 aside {
@@ -292,18 +296,18 @@ quote::after {
     margin: 0 auto;
 }
 
-.square {
+.square img {
     filter: grayscale();
     opacity: .8;
     mix-blend-mode: multiply;
     cursor: pointer;
 }
 
-.square, .square img {
+.square, .square > *{
     transition: opacity .25s ease, background .5s ease;
 }
 
-.square:hover, .square.active {
+.square:hover img, .square.active img {
     filter: none;
     mix-blend-mode: normal;
     opacity: 1;
