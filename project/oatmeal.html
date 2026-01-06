@@ -39,7 +39,7 @@
             </div>
         </div>
     </header>
-    <div class="container">
+    <div id="work">
         <aside>
             <div class="details">
                 <div>
@@ -65,29 +65,25 @@
             </div>
         </aside>
         <main>
-            <section class="white">
-                <div class="textbox">
-                    <textarea id="demo-text" placeholder="Type a sentence..." maxlength="50"></textarea>
+            <div class="textbox">
+                <textarea id="demo-text" placeholder="Type a sentence..." maxlength="50"></textarea>
+            </div>
+            <div class="controls">
+                <input type="range" id="font-weight" name="font-weight" min="300" max="900" value="400">
+                <label for="font-weight" class="slider-label">
+                    <p>
+                        Weight: <span id="weight-output">400</span>
+                    </p>
+                </label>
+            </div>
+            <div class="grid grid2">
+                <div class="square">
+                    <img id="cover" src="../assets/projects/oatmeal/cover.svg">
                 </div>
-                <div class="controls">
-                    <input type="range" id="font-weight" name="font-weight" min="300" max="900" value="400">
-                    <label for="font-weight" class="slider-label">
-                        <p>
-                            Weight: <span id="weight-output">400</span>
-                        </p>
-                    </label>
+                <div class="square">
+                    <img id="poster_light" src="../assets/projects/oatmeal/graphic.jpg">
                 </div>
-            </section>
-            <section>
-                <div class="grid grid2">
-                    <div class="square">
-                        <img id="cover" src="../assets/projects/oatmeal/cover.svg">
-                    </div>
-                    <div class="square">
-                        <img id="poster_light" src="../assets/projects/oatmeal/graphic.jpg">
-                    </div>
-                </div>
-            </section>
+            </div>
         </main>
     </div>
     <footer>
