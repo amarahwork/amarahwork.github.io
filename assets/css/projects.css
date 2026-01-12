@@ -255,7 +255,8 @@ quote::after {
 
 .grid + .grid { margin-top: 2px; }
 
-.grid1 { grid-template-columns: auto; }
+.grid1 { display: block }
+.grid1 > * { margin-bottom: var(--gutter); margin-right: var(--gutter)}
 .grid2 { grid-template-columns: 1fr 1fr; }
 .grid3 { grid-template-columns: 1fr 1fr 1fr; }
 
