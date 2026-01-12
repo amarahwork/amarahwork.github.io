@@ -4,7 +4,19 @@
 
 body {
     background-color: var(--black);
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--white);
+}
+
+header {
+    background: none;
+    border-color: transparent;
+}
+
+h1 {
+    color: var(--white);
+    text-shadow: -1px 1px var(--black);
 }
 
 /* Jump Links */
@@ -12,7 +24,7 @@ body {
 aside {
     padding-left: 0;
     padding-right: 0;
-    border-color: var(--white);
+    border-color: var(--primary);
 }
 
 aside a {
@@ -20,8 +32,9 @@ aside a {
 }
 
 aside p {
+    color: var(--black);
     margin-left: var(--page-margin);
-    border-bottom: var(--white) 1px solid;
+    border-bottom: var(--primary) 1px solid;
 }
 
 aside button {
@@ -40,6 +53,7 @@ aside button:hover {
 
 #work main {
     padding-top: 0;
+    background: var(--black)
 }
 
 .project .grid:first-child img {
